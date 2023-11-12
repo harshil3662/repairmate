@@ -8,7 +8,6 @@ function Signin() {
   const [isSubmitted,setSubmit] = useState(false)
   const [input,setInput] = useState('')
   const [isPressed,setPress] = useState(false)
-  const [data,setData] = useState({id:'',psw:''})
 
   const inputHandler1 = (e)=>{
     const value = e.target.value
@@ -34,43 +33,60 @@ function Signin() {
     setInput('')
     setType('password')
     setName('uPass')
-    setData((preState)=>{
-      return {
-        ...preState,
-        id: input
-      }
-    })
   }
 
   const onSubmitHandler = ()=>{
     setSubmit(true)
-    setData((preState)=>{
-      return {
-        ...preState,
-        psw: input
-      }
-    })
-    window.alert(`Id: ${data.id} Psw:${data.psw}`)
+    window.alert('form submitted')
   }
 
   return (
-    <div>
-      <form action='http://localhost:3000/'>
-        <div className='input-1'>
-          <input 
-            type={type} 
-            name={name} 
-            value={input} 
-            onChange={isPressed ? inputHandler2 : inputHandler1}/>
-            
-          <button 
-            type={isSubmitted ? 'submit' : 'button'}
-            onClick={isPressed ? onSubmitHandler : onClickHandler}
-          >
-            {isPressed ? 'Submit' : 'Next'}
-          </button>
+    <div className='signin'>
+      <div>
+        <p className='logo-name'>Repairmate
+        
+          <span class="material-symbols-outlined icon">
+            build_circle
+          </span>
+        </p>
+      </div>
+      <div className='signinBox'>
+        <div>
+          <p className='header'>Sign in</p>
         </div>
-      </form>
+        <div>
+          <form action='http://localhost:3000/'>
+            <div className='box'>
+              <div>
+                <label className='inputField'>{isPressed ? 'Password' : 'Email or Mobile Number'}</label>
+              </div>
+                
+              <div className='inputBox'>
+                <div className='inputBox-1'>
+                  <input 
+                    className='inpt'
+                    type={type}
+                    name={name}
+                    value={input}
+                    onChange={isPressed ? inputHandler2 : inputHandler1}/>
+                </div>
+                <div className='inputBox-2'>
+                  <button 
+                    className='btn'
+                    type={isSubmitted ? 'submit' : 'button'}
+                    onClick={isPressed ? onSubmitHandler : onClickHandler}
+                  >
+                    {isPressed ?
+                    'Go' : 
+                    'Next'
+                    }
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   )
 }
