@@ -1,0 +1,93 @@
+.garage-list{
+    margin: 2em;
+    border-radius: 1em;
+    overflow: auto;
+    box-shadow: 0.3em 0.3em 0.6em 0.2em rgb(215, 215, 215);
+}
+
+.garage-list:hover{
+    box-shadow: 0.3em 0.3em 0.9em 0.5em rgb(206, 206, 206);
+}
+
+.garage{
+    margin: 1em;
+    padding: 0.4em;
+    border: 1px solid rgb(244, 240, 244);
+    border-radius: 0.5em;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    row-gap: 0.2em;
+}
+
+.garage:hover{
+    background-color: #ebeef1;
+}
+
+.div1{
+    display: grid;
+    grid-template-columns: auto auto;
+    place-items: center;
+    width: fit-content;
+    column-gap: 0.5em;
+    margin-bottom: 0.5em;
+    color: rgb(83, 16, 83);
+}
+
+.garage-icon{
+    color: black;
+}
+
+.garageName{
+    font-size: 1.2em;
+    font-weight: 900;
+    text-decoration: none;
+    color: black;
+}
+.garageName:hover{
+    text-decoration: underline;
+}
+
+.div2{
+    display: grid;
+    grid-template-columns: auto auto;
+    place-items: center;
+    width: fit-content;
+    column-gap: 0.5em;
+    color: rgb(129, 65, 129);
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+}
+
+.location-icon{
+    color: rgb(80, 80, 80);
+}
+
+.location{
+    color: rgb(80, 80, 80);
+    text-decoration: none;
+}
+.location:hover{
+    text-decoration: underline;
+}
+
+.div3{
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 1em;
+    color: rgb(113, 92, 113);
+    place-items: center;
+    width: fit-content;
+    column-gap: 0.5em;
+}
+
+.mail-icon{
+    color: #6c757d;
+}
+
+.email{
+    color: #6c757d;
+    text-decoration: none;
+}
+.email:hover{
+    text-decoration: underline;
+}

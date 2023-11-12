@@ -1,0 +1,10 @@
+.footer{
+    padding: 2em;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    place-items: center;
+    column-gap: 1em;
+    height: fit-content;
+    background-color: #dee2e6;
+}
