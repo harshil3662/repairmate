@@ -2,6 +2,7 @@
     padding-top: 10em;
     display: grid;
     grid-template-rows: auto auto;
+    row-gap: 1em;
     place-items: center;
 }
 
@@ -47,7 +48,7 @@
 
 .inpt{
     border: 1px solid gray;
-    border-radius: 1em;
+    border-radius: 0.5em;
     width: 100%;
     height: 100%;
 }
@@ -67,4 +68,21 @@
 .btn:hover{
     background-color: white;
     color: #6c757d;
+}
+
+.line-through{
+    display: grid;
+    width: 35vw;
+    place-items: center;
+}
+
+.btn-signup{
+    width: 35vw;
+    color: black;
+    background-color: #dee2e6;
+}
+
+.btn-signup:hover{
+    color: #dee2e6;
+    background-color: rgb(202, 73, 73);
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import '../css/Signin.css'
+import { Link } from 'react-router-dom'
 
 function Signin() {
   const [name,setName] = useState('')
@@ -42,14 +43,15 @@ function Signin() {
 
   return (
     <div className='signin'>
+
       <div>
         <p className='logo-name'>Repairmate
-        
           <span class="material-symbols-outlined icon">
             build_circle
           </span>
         </p>
       </div>
+
       <div className='signinBox'>
         <div>
           <p className='header'>Sign in</p>
@@ -86,6 +88,16 @@ function Signin() {
             </div>
           </form>
         </div>
+      </div>
+      
+      <div className='line-through'>
+        <div style={{fontSize:'0.9em'}}>New at Repairmate?</div>
+      </div>
+
+      <div>
+        <Link to='/signup'>
+          <button className='btn-signup'>Create a Repairmate Account</button>
+        </Link>
       </div>
     </div>
   )
