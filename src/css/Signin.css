@@ -1,88 +1,141 @@
+.tile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
 .signin{
-    padding-top: 10em;
     display: grid;
     grid-template-rows: auto auto;
-    row-gap: 1em;
+    row-gap: 1.1em;
     place-items: center;
+}
+
+.logoBox{
+    display: grid;
+    place-items: center;
+    grid-template-columns: auto auto;
+    column-gap: 5px;
+    height: fit-content;
 }
 
 .logo-name{
     color: black;
-    font-size: 1.8em;
+    font-size: 2em;
+    font-weight: bold;
 }
 
-.logo{
+.icon{
     color: black;
-    font-size: 1.8em;
+    font-size: 2em;
 }
 
 .signinBox{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    row-gap: 1em;
     padding: 1.5em;
     width: 35vw;
     height: auto;
     border: 1px solid rgb(198, 198, 198);
     border-radius: 1em;
+    box-shadow: 0.5em 0.5em 0.9em 0.1em rgb(206, 206, 206);
 }
 
-.header{
+.prevBox{
+    display: grid;
+    place-items: center;
+    grid-template-columns: auto auto;
+    height: fit-content;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.prev{
+    font-size: 1em;
+    color: rgb(19, 117, 255);
+    font-weight: bold;
+}
+
+.prev-lable{
+    color: rgb(19, 117, 255);
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.signin-lable{
     margin-bottom: 0.5em;
     font-size: 2em;
     font-weight: bold;
 }
 
-.box{
+.signin-form-box{
     display: grid;
     grid-template-rows: auto auto;
     row-gap: 0.5em;
 }
 
-.inputField{
-
-}
-
-.inputBox{
+.inputField-lable{
     display: grid;
     grid-template-columns: 70% 25%;
     column-gap: 5%;
 }
 
-.inpt{
+.psw-box{
+    display: inline;
+}
+
+.fgt-psw{
+    text-decoration: none;
+    float: right;
+}
+
+.fgt-psw:hover{
+    text-decoration: underline;
+}
+
+.signin-inputBox{
+    display: grid;
+    grid-template-columns: 70% 25%;
+    column-gap: 5%;
+}
+
+.inpt-in-signin{
     border: 1px solid gray;
     border-radius: 0.5em;
     width: 100%;
     height: 100%;
 }
 
-.inpt:focus{
+.inpt-in-signin:focus{
     outline-color: #6c757d;
 }
 
-.btn{
-    background-color: #6c757d;
-    color: #dee2e6;
-    border: 1px solid #6c757d;
+.btn-in-signin{
+    background-color: #dee2e6;
+    color: black;
+    border: 1px solid rgb(188, 188, 188);
     border-radius: 1em;
     width: 4em;
 }
 
-.btn:hover{
-    background-color: white;
-    color: #6c757d;
+.btn-in-signin:hover{
+    background-color: #6c757d;
+    color: white;
+    border: 1px solid #6c757d;
 }
 
-.line-through{
-    display: grid;
-    width: 35vw;
-    place-items: center;
-}
-
-.btn-signup{
+.signup-btn{
     width: 35vw;
     color: black;
     background-color: #dee2e6;
+    border: 1px solid rgb(188, 188, 188);
 }
 
-.btn-signup:hover{
+.signup-btn:hover{
     color: #dee2e6;
-    background-color: rgb(202, 73, 73);
+    background-color: #6c757d;
+    border: 1px solid #6c757d;
 }

@@ -1,0 +1,24 @@
+.tile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.signinBox{
+    display: grid;
+    row-gap: 1em;
+    padding: 1.5em;
+    width: 35vw;
+    height: auto;
+    border: 1px solid rgb(198, 198, 198);
+    border-radius: 1em;
+    box-shadow: 0.5em 0.5em 0.9em 0.1em rgb(206, 206, 206);
+}
+
+.header{
+    margin-bottom: 0.5em;
+    font-size: 2em;
+    font-weight: bold;
+}

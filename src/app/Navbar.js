@@ -15,7 +15,7 @@ function Navbar() {
         </div>
         <div className='nav-right'>
           <div className='msg'>
-            Let's get your vehicle back on the road!
+            Let's get your vehicle running back on the road!
           </div>
           <div>
             <Link to='/signin'>
