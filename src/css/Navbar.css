@@ -8,7 +8,9 @@
     padding: 1em;
     column-gap: 0.5em;
     height: auto;
-    background-color: #6c757d;
+    /* background-color: #6c757d; */
+    background-color: #dee2e6;
+    border: 1px solid rgb(215, 215, 215);
 }
 
 .nav-left{
@@ -23,11 +25,11 @@
 .name{
     font-size: 2em;
     font-weight: bold;
-    color: #dee2e6;
+    color: #6c757d;
 }
 
 .logo{
-    color: #dee2e6;
+    color: #6c757d;
     font-size: 2em;
 }
 
@@ -41,16 +43,16 @@
 }
 
 .msg{
-    color: #dee2e6;
+    color: #6c757d;
 }
 
 button{
-    background-color: #dee2e6;
-    color: #6c757d;
+    background-color: #6c757d;
+    color: #dee2e6;
     font-size: 1em;
     font-weight: bold;
     padding: 0.5em;
-    border: 1px solid #dee2e6;
+    border: 1px solid #6c757d;
     border-radius: 0.5em;
     cursor: pointer;
 }
@@ -67,5 +69,5 @@ input{
 
 .setting{
     font-size: 2em;
-    color: #dee2e6;
+    color: #6c757d;
 }

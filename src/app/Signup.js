@@ -1,46 +1,33 @@
 import { useState,useEffect } from 'react'
 import '../css/Signup.css'
-import { Link } from 'react-router-dom'
 
 function Signup() {
 
-  const lableList = [
-    "Enter your name",
-    "Register your email",
-    "Register your Mobile",
-    "Enter your password",
-    "Re-type your password"
-  ]
-
-  const [values,setValues] = useState([])
-
-  const [state,setState] = useState({
-    lable:'',
-    inputType:'',
-    buttonType:'',
-    input:'',
-    name:''
-  })
-
-  useEffect(()=>{
-    setState({
-      ...state,
-      lable: lableList[0],
-      inputType:'text',
-      buttonType:'button',
-      name:'uName'
-    })
-  },[state])
+  const [pointer,setPointer] = useState(0)
+  const [state,setState] = useState([
+    { lable : 'Enter Your Name:',input:'text',value:'',button:'button',name:'uName'},
+    { lable : 'Register Your Email:',input:'email',value:'',button:'button',name:'uEmail'},
+    { lable : 'Register Your Mobile:',input:'tel',value:'',button:'button',name:'uMobile'},
+    { lable : 'Make Your Password:',input:'password',value:'',button:'button',name:'uPSW'},
+    { lable : 'Re-type the Password:',input:'password',value:'',button:'button',name:'uRPSW'}
+  ])
 
   const clickHandler = ()=>{
-    setValues(values.push(state.input))
+    setPointer(pointer+1)
+  }
+
+  const submitHandler = (e)=>{
+    e.preventDefault()
+
+    const updatedState = [...state]
+    updatedState[pointer].button = 'submit'
+    setState(updatedState)
   }
 
   const onChangeHandler = (e)=>{
-    setState({
-      ...state,
-      input : e.target.value
-    })
+    const updatedState = [...state]
+    updatedState[pointer].value = e.target.value
+    setState(updatedState)
   }
 
   return (
@@ -50,45 +37,53 @@ function Signup() {
         <div className='logoBox'>
           <div className='logo-name'>Repairmate</div>
           <div>
-            <span class="material-symbols-outlined icon">
+            <span className="material-symbols-outlined icon">
                 build_circle
             </span>
           </div>
         </div>
-      </div>
 
-      <div className='signupBox'>
-        <div>
-          <p className='header'>Sign Up</p>
-        </div>
-        <div>
-          <form action='http://localhost:3000/'>
-            <div className='signup-form-box'>
-              <div className='inputField-lable'>
-                {state.lable}
-              </div>
-              <div className='signup-inputBox'>
-                <div>
-                  <input
-                    className='inpt-in-signup'
-                    type={state.inputType}
-                    name={state.name}
-                    value={state.input}
-                    onChange={onChangeHandler} />
+        <div className='signupBox'>
+          <div>{  pointer !== 0 ? 
+                  <div className='prevBox' onClick={()=>{setPointer(pointer-1)}}>
+                    <div>
+                      <span class="material-symbols-outlined prev">arrow_back_ios_new</span>
+                    </div>
+                    <div className='prev-lable'>Back</div>
+                  </div>
+                    :
+                  <div></div>
+              }
+          </div>
+          <div>
+            <p className='signup-lable'>Sign Up</p>
+          </div>
+          <div>
+            <form action='http://localhost:3000/' method='post'>
+              <div className='signup-form-box'>
+                <div className='inputField-lable'>
+                  {state[pointer].lable}
                 </div>
-
+                <div className='signup-inputBox'>
+                    <input
+                      className='inpt-in-signup'
+                      type={state[pointer].input}
+                      name={state[pointer].name}
+                      value={state[pointer].value}
+                      onChange={onChangeHandler} />
+                </div>
                 <div>
                   <button 
                     className='btn-in-signup' 
-                    type={state.buttonType}
-                    onClick={clickHandler}
+                    type={state[pointer].button}
+                    onClick={pointer===4 ? submitHandler : clickHandler}
                   >
-                    Next
+                    {pointer===4 ? 'Create account' : 'Next'}
                   </button>
                 </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </div>

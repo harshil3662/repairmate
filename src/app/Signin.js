@@ -59,7 +59,7 @@ function Signin() {
                         <div>
                           <span class="material-symbols-outlined prev">arrow_back_ios_new</span>
                         </div>
-                        <div className='prev-lable'>Prev</div>
+                        <div className='prev-lable'>Back</div>
                       </div>
                         :
                       <div></div>
@@ -69,7 +69,7 @@ function Signin() {
             <p className='signin-lable'>Sign in</p>
           </div>
           <div>
-            <form action='http://localhost:3000/'>
+            <form action='http://localhost:3000/' method='post'>
               <div className='signin-form-box'>
                 <div className='inputField-lable'>
                     {isPressed ? 
@@ -109,7 +109,7 @@ function Signin() {
         </div>
 
         <div>
-          <div style={{fontSize:'0.9em'}}>New at Repairmate?</div>
+          <div style={{fontSize:'0.9em',color:'gray'}}>Newcomer to Repairmate?</div>
         </div>
 
         <div>

@@ -4,8 +4,8 @@
     width: 60vw;
     height: fit-content;
     border-radius: 5em;
-    border: 1px solid rgb(246, 246, 246);
-    box-shadow: 0.3em 0.3em 0.4em 0.1em rgb(215, 215, 215);
+    border: 1px solid rgb(213, 213, 213);
+    box-shadow: 0.1em 0.1em 0.3em 0.1em rgb(215, 215, 215);
 }
 
 .input-box{
@@ -31,11 +31,11 @@
     float: right;
     padding: 1em;
     border-radius: 5em;
-    background-color: #dee2e6;
+    background-color: #6c757d;
     border: 1px solid #6c757d;
-    color: #6c757d;
+    color: #dee2e6;
     cursor: pointer;
-    transition: max-width 1s;
+    transition: max-width 2s;
     max-width: 100px;
     white-space: nowrap;
     overflow: hidden;
