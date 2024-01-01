@@ -1,9 +1,13 @@
 import React from 'react'
 import {useState,useEffect} from 'react'
+import { Link } from 'react-router-dom'
 import '../css/GarageList.css'
 
 function GarageList() {
   const [data,setData] = useState([])
+  const [listStyle,setListStyle] = useState({
+    overflowX:'auto'
+  })
 
   useEffect(()=>{
     fetch('http://localhost:8080/garages')
@@ -15,6 +19,11 @@ function GarageList() {
         })
         .then((responseData) => {
           setData(responseData.list)
+          setListStyle({
+            ...listStyle,
+            display:'grid',
+            gridTemplateColumns:`repeat(${data.length}, 1fr)`
+          })
         })
         .catch((err) => {
           console.log(err)
@@ -22,25 +31,56 @@ function GarageList() {
   },[data])
 
   return (
-    <div className='garage-list'>
+    <div className='list'>
+      <p className='lable-rated'>Top Rated Auto Centers</p>
+      <div className='garage-list' style={listStyle}>
         {data.map((garage)=>{
             return (
-                <div className="garage" key={garage._id}>
+              <Link to={`/garage/${garage._id}`} state={{garage}} className='link'>
+                <div className="garage-box" key={garage._id}>
+                  <div className='garage'>
                     <div className='div1'>
-                      <span class="material-symbols-outlined garage-icon">garage_door</span>
-                      <a className='garageName' href='/#'>{garage.name}</a>
+                      <div className='garageName'>
+                        <p className='gName'>{garage.name}</p>
+                      </div>
+                      <div className='garageRating'>
+                        <div className='garagaRate'>
+                          <span class="material-symbols-outlined">star</span>
+                          <div className='rate'>4.9</div>
+                        </div>
+                      </div>
                     </div>
                     <div className='div2'>
-                      <span class="material-symbols-outlined location-icon">location_on</span>
-                      <a className='location' href='/#'>{garage.location}, Toronto, On</a>
+                      <p className='location'>{garage.location}, Toronto, On</p>
                     </div>
                     <div className='div3'>
-                      <span class="material-symbols-outlined mail-icon">mail</span>
-                      <a className='email' href='/#'>{garage.email}</a>
+                      <h3>Best at:</h3>
+                      <ul className='services'>
+                        <li>Lorem, ipsum dolor.</li>
+                        <li>Lorem, ipsum dolor.</li>
+                        <li>Lorem, ipsum.</li>
+                        <li>Lorem.</li>
+                        <li>Lorem ipsum dolor sit.</li>
+                      </ul>
                     </div>
+                    <div className='div4'>
+                      <div className='contact'>
+                        <div className='email-box'>
+                          <span class="material-symbols-outlined">mail</span>
+                          <div className='email'> {garage.email}</div>
+                        </div>
+                        <div className='number-box'>
+                          <span class="material-symbols-outlined">call</span>
+                          <div className='number'>(647) 829-0551</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </Link>
             )
         })}
+      </div>
     </div>
   )
 }

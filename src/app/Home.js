@@ -1,5 +1,4 @@
 import GarageList from './GarageList'
-import Map from './Map'
 import 'leaflet/dist/leaflet.css'
 import '../css/Home.css'
 import Searchbar from './Searchbar'
@@ -12,7 +11,7 @@ function Home() {
       </div>
       <div className='container-2'>
         <GarageList/>
-        <Map/>
+        <GarageList/>
       </div>
     </div>
   )

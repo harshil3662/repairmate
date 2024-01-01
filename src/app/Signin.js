@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import '../css/Signin.css'
+import Footer from './Footer'
 import { Link } from 'react-router-dom'
 
 function Signin() {
@@ -45,10 +46,13 @@ function Signin() {
       <div className='signin'>
 
         <div className='logoBox'>
-          <div className='logo-name'>Repairmate</div>
+          <div>
+            <label className='repair'>Repair</label>
+            <label className='mate'>mate</label>
+          </div>
           <div>
             <span class="material-symbols-outlined icon">
-                build_circle
+            construction
             </span>
           </div>
         </div>
@@ -118,6 +122,7 @@ function Signin() {
           </Link>
         </div>
       </div>
+      <div className='signin-footer'><Footer/></div>
     </div>
   )
 }

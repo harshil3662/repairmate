@@ -1,16 +1,15 @@
 *{
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Josefin Sans';
 }
 
 .navbar{
     padding: 1em;
     column-gap: 0.5em;
     height: auto;
-    /* background-color: #6c757d; */
-    background-color: #dee2e6;
-    border: 1px solid rgb(215, 215, 215);
+    background-image: linear-gradient(to bottom right, #FF8C00, #FF6347);
+    border: 1px solid #FF8C00;
 }
 
 .nav-left{
@@ -22,15 +21,28 @@
     height: fit-content;
 }
 
-.name{
+.lable-1{
+    font-family: 'Amarante';
     font-size: 2em;
     font-weight: bold;
-    color: #6c757d;
+    color: #FFEFD5;
 }
 
-.logo{
-    color: #6c757d;
-    font-size: 2em;
+.lable-2{
+    font-family: 'Amarante';
+    font-size: 3em;
+    font-weight: bold;
+    color: #FFEFD5;
+}
+
+.logo > .material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  color: #8B4513;
+  font-size: 3em;
 }
 
 .nav-right{
@@ -39,35 +51,36 @@
     place-items: center;
     grid-template-columns: auto auto auto;
     column-gap: 1em;
-    height: fit-content;
+    height: 100%;
 }
 
 .msg{
-    color: #6c757d;
+    color: white;
+    font-weight: 500;
 }
 
-button{
-    background-color: #6c757d;
-    color: #dee2e6;
+.car{
+    font-size: 3em;
+}
+
+.nav-btn{
+    background-color: #FFEFD5;
+    color: #FF4500;
     font-size: 1em;
     font-weight: bold;
     padding: 0.5em;
-    border: 1px solid #6c757d;
+    border: 1px solid #FF4500;
     border-radius: 0.5em;
     cursor: pointer;
 }
 
-.user{
-    color: #dee2e6;
-    font-size: 1.2em;
-    text-decoration: underline;
-}
-
-input{
-    color: #6c757d;
-}
-
-.setting{
+.setting > .material-symbols-outlined{
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 40;
     font-size: 2em;
-    color: #6c757d;
+    color: #FFEFD5;
+    cursor: pointer;
 }

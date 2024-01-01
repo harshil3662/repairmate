@@ -1,5 +1,6 @@
 import { useState,useEffect } from 'react'
 import '../css/Signup.css'
+import Footer from './Footer'
 
 function Signup() {
 
@@ -35,10 +36,13 @@ function Signup() {
 
       <div className='signup'>
         <div className='logoBox'>
-          <div className='logo-name'>Repairmate</div>
           <div>
-            <span className="material-symbols-outlined icon">
-                build_circle
+            <label className='repair'>Repair</label>
+            <label className='mate'>mate</label>
+          </div>
+          <div>
+            <span class="material-symbols-outlined icon">
+            construction
             </span>
           </div>
         </div>
@@ -86,6 +90,7 @@ function Signup() {
           </div>
         </div>
       </div>
+      <div className='signup-footer'><Footer/></div>
     </div>
   )
 }

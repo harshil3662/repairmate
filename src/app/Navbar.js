@@ -6,24 +6,27 @@ function Navbar() {
     return (
       <div className='navbar'>
         <div className='nav-left'>
-          <div className='name'>Repairmate</div>
           <div>
-            <span class="material-symbols-outlined logo">
-                build_circle
+            <label className='lable-1'>Repair</label>
+            <label className='lable-2'>mate</label>
+          </div>
+          <div className='logo'>
+            <span class="material-symbols-outlined">
+            construction
             </span>
           </div>
         </div>
         <div className='nav-right'>
           <div className='msg'>
-            Let's get your vehicle running back on the road!
+            Let's get your vehicle back on Track
           </div>
           <div>
             <Link to='/signin'>
-              <button>Sign In</button>
+              <button className='nav-btn'>Sign In</button>
             </Link>
           </div>
-          <div>
-            <span className="material-symbols-outlined setting">
+          <div className='setting'>
+            <span className="material-symbols-outlined">
               settings
             </span>
           </div>
