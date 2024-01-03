@@ -1,5 +1,5 @@
 .container{
     display: grid;
     grid-template-rows: auto auto auto;
-    background-color: #F5F5F5;
+    background-color: F5F5F5;
 }

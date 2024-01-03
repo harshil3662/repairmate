@@ -4,7 +4,8 @@
     display: grid;
     grid-template-rows: auto auto;
     row-gap: 0.5em;
-    background-color: #DCDCDC;
+    background-image: linear-gradient(to bottom right, #d5d5d5, #F5F5F5);
+    background-color: #e5e5e5;
 }
 
 .lable-rated{
@@ -28,7 +29,7 @@
     padding: 1em;
     background-color: white;
     border: 1px solid #D3D3D3;
-    border-radius: 0.5em;
+    border-radius: 1em;
     width: 400px;
     height: 250px;
 }
@@ -100,7 +101,7 @@
 }
 
 .div3 > h3{
-    color: #C71585;
+    color: #FF4500;
 }
 
 .services{

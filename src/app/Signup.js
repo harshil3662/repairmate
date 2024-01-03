@@ -40,8 +40,8 @@ function Signup() {
             <label className='repair'>Repair</label>
             <label className='mate'>mate</label>
           </div>
-          <div>
-            <span class="material-symbols-outlined icon">
+          <div className='icon'>
+            <span class="material-symbols-outlined">
             construction
             </span>
           </div>
@@ -82,7 +82,7 @@ function Signup() {
                     type={state[pointer].button}
                     onClick={pointer===4 ? submitHandler : clickHandler}
                   >
-                    {pointer===4 ? 'Create account' : 'Next'}
+                    {pointer===4 ? 'Create account' : 'Proceed Next'}
                   </button>
                 </div>
               </div>

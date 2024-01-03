@@ -8,8 +8,8 @@
     padding: 1em;
     column-gap: 0.5em;
     height: auto;
-    background-image: linear-gradient(to bottom right, #FF8C00, #FF6347);
-    border: 1px solid #FF8C00;
+    background-image: linear-gradient(to bottom right, #9370DB, #663399);
+    border: 0px solid white;
 }
 
 .nav-left{
@@ -19,30 +19,44 @@
     grid-template-columns: auto auto;
     column-gap: 5px;
     height: fit-content;
+    text-shadow: 1px 1px 6px black;
 }
 
 .lable-1{
     font-family: 'Amarante';
     font-size: 2em;
     font-weight: bold;
-    color: #FFEFD5;
+    color: #FFA500;
 }
 
 .lable-2{
     font-family: 'Amarante';
     font-size: 3em;
     font-weight: bold;
-    color: #FFEFD5;
+    color: #FF4500;
 }
 
-.logo > .material-symbols-outlined {
+.logo .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
   'wght' 400,
   'GRAD' 0,
   'opsz' 24;
-  color: #8B4513;
+  color: #C0C0C0;
   font-size: 3em;
+  cursor: pointer;
+  transition: transform 1s ease;
+}
+
+.logo .material-symbols-outlined:hover{
+    transform: rotateY(-180deg);
+    animation: revertAnimation 1s ease 1.5s forwards;
+}
+
+@keyframes revertAnimation {
+    to {
+      transform: scale(1);
+    }
 }
 
 .nav-right{
@@ -64,17 +78,23 @@
 }
 
 .nav-btn{
-    background-color: #FFEFD5;
-    color: #FF4500;
+    background-color: #e07b00;
+    color: white;
     font-size: 1em;
     font-weight: bold;
     padding: 0.5em;
-    border: 1px solid #FF4500;
+    border: 1px solid #e07b00;
     border-radius: 0.5em;
     cursor: pointer;
 }
 
-.setting > .material-symbols-outlined{
+.nav-btn:hover{
+    background-color: #F5F5F5;
+    color: #e07b00;
+    border: 1px solid white;
+}
+
+.setting .material-symbols-outlined{
     font-variation-settings:
     'FILL' 0,
     'wght' 400,
@@ -83,4 +103,9 @@
     font-size: 2em;
     color: #FFEFD5;
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.setting .material-symbols-outlined:hover{
+    transform: rotate(-90deg);
 }

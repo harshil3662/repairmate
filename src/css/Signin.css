@@ -37,10 +37,14 @@
     color: #FF4500;
 }
 
-.icon{
+.icon .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
     color: #808080;
     font-size: 3em;
-    font-weight: bold;
 }
 
 .signinBox{
@@ -127,7 +131,7 @@
 }
 
 .btn-in-signin{
-    background-image: linear-gradient(to bottom right, #FFF0F5, #E6E6FA);
+    background-color: #E6E6FA;
     color: #663399;
     border-radius: 0.5em;
     width: 100%;
@@ -137,25 +141,25 @@
 }
 
 .btn-in-signin:hover{
-    background-image: linear-gradient(to bottom right, #C71585, #663399);
+    background-image: linear-gradient(to bottom right, #9370DB, #663399);
     color: white;
-    border: 1px solid #663399;
+    border: 1px solid #9370DB;
 }
 
 .signup-btn{
     width: 30vw;
-    color: #FF4500;
-    background-image: linear-gradient(to bottom right, #FFEFD5, #FFE4E1);
+    color: #663399;
+    background-color: #E6E6FA;
     height: 2.5em;
     border-radius: 0.5em;
     font-size: 1em;
-    border: 1px solid #FF8C00;
+    border: 1px solid #663399;
 }
 
 .signup-btn:hover{
+    background-image: linear-gradient(to bottom right, #9370DB, #663399);
     color: white;
-    background-image: linear-gradient(to bottom right, #FF8C00, #FF4500);
-    border: 1px solid white;
+    border: 1px solid #9370DB;
 }
 
 .signin-footer{

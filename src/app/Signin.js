@@ -50,8 +50,8 @@ function Signin() {
             <label className='repair'>Repair</label>
             <label className='mate'>mate</label>
           </div>
-          <div>
-            <span class="material-symbols-outlined icon">
+          <div className='icon'>
+            <span class="material-symbols-outlined">
             construction
             </span>
           </div>
@@ -101,8 +101,8 @@ function Signin() {
                       onClick={isPressed ? onSubmitHandler : onClickHandler}
                     >
                       {isPressed ?
-                      'Go' : 
-                      'Next'
+                      'Sign-in' : 
+                      'Go On'
                       }
                     </button>
                   </div>
