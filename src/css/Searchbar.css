@@ -1,3 +1,10 @@
+.searchbar-container{
+    margin-top: 1em;
+    padding: 1em;
+    display: grid;
+    place-items: center;
+}
+
 .searchBar{
     padding: 0.3em;
     display: grid;

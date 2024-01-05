@@ -56,11 +56,11 @@ function GarageList() {
                     <div className='div3'>
                       <h3>Best at:</h3>
                       <ul className='services'>
-                        <li>Lorem, ipsum dolor.</li>
-                        <li>Lorem, ipsum dolor.</li>
-                        <li>Lorem, ipsum.</li>
-                        <li>Lorem.</li>
-                        <li>Lorem ipsum dolor sit.</li>
+                        <li>Auto engine diagnostic</li>
+                        <li>Air & cabin filter replacement</li>
+                        <li>Electrical</li>
+                        <li>Oil change</li>
+                        <li>Engine repair</li>
                       </ul>
                     </div>
                     <div className='div4'>
