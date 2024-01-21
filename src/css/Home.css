@@ -4,7 +4,6 @@
     display: grid;
     grid-template-rows: auto auto;
     row-gap: 0.5em;
-    background-image: linear-gradient(to bottom right, #f7f7ff, #d3d3ee);
 }
 
 .container-3{

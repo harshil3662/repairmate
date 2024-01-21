@@ -41,12 +41,13 @@
     float: right;
     padding: 1em;
     border-radius: 5em;
-    background-color: #FF8C00;
-    border: 1px solid #e07b00;
+    background-image: linear-gradient(to bottom right, #9370DB, #663399);
+    border: 1px solid #764ec4;
     color: white;
     cursor: pointer;
     box-shadow: none;
     height: 100%;
+    transition: width 1s ease;
 }
 
 .search-lable-div{

@@ -6,6 +6,8 @@ import '../css/Garage.css'
 
 function Garage() {
 
+  const [star,setStar] = useState(4.9)
+
   const services = [
     {src:'/car.png',serviceName:'Car Inspection'},
     {src:'/schedule.png',serviceName:'Periodic Service'},
@@ -14,21 +16,82 @@ function Garage() {
     {src:'/engine.png',serviceName:'Engine Repairing'}
   ]
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <div>
       <Searchbar/>
       <div className='garage-details'>
         <div className='name-star-experty'>
-          <div>Peter's Garage For Imports</div>
-          <div>4.9 stars</div>
-          <div>Since 1998</div>
+          <div className='name-star'>
+            <div className='garage-name'>Peter's Garage For Imports</div>
+            <div className='garage-star'>
+              <div className='counted-star'>
+                <span class="material-symbols-outlined">star_rate</span>
+                <span class="material-symbols-outlined">star_rate</span>
+                <span class="material-symbols-outlined">star_rate</span>
+                <span class="material-symbols-outlined">star_rate</span>
+                <span class="material-symbols-outlined">star_rate</span>
+              </div>
+              <div className="counted-star-no">{star}</div>
+            </div>
+          </div>
+          <div className='experience'>
+            <div><img src='/medal.png' alt=""/></div>
+            <div>Since 1998</div>
+          </div>
         </div>
+        <hr style={{marginLeft:'1em',marginRight:'1em',color:'#DCDCDC',border:'1px solid #DCDCDC'}}/>
         <div className='overview-section'>
           <div className='detailMe'>
-            <div>160 Canon Jackson Dr, York, Toronto, M6M 0B6</div>
-            <div>+1 (647) 829-0551</div>
-            <div>Opening Hours:</div>
-            <div className='social-media'>
+            <div className='detailMe-location'>
+              <span class="material-symbols-outlined">home_pin</span>
+              <label className='detailMe-lable'>160 Canon Jackson Dr, York, Toronto, M6M 0B6</label>
+            </div>
+            <div className='detailMe-call'>
+              <span class="material-symbols-outlined">call</span>
+              <label className='detailMe-lable'>+1 (647) 829-0551</label>
+            </div>
+            <div className='detailMe-hours'>
+              <div className='day'>
+                <lable>Monday</lable>
+                <lable>6am - 10pm</lable>
+                <lable></lable>
+              </div>
+              <div className='day'>
+                <lable>Tuesday</lable>
+                <lable>6am - 10pm</lable>
+                <lable></lable>
+              </div>
+              <div className='day'>
+                <lable>Wednesday</lable>
+                <lable>6am - 10pm</lable>
+                <lable></lable>
+              </div>
+              <div className='day current'>
+                <lable>Thursday</lable>
+                <lable>6am - 10pm</lable>
+                <lable>Open</lable>
+              </div>
+              <div className='day'>
+                <lable>Friday</lable>
+                <lable>6am - 10pm</lable>
+                <lable></lable>
+              </div>
+              <div className='day'>
+                <lable>Saturday</lable>
+                <lable>6am - 10pm</lable>
+                <lable></lable>
+              </div>
+              <div className='day'>
+                <lable>Sunday</lable>
+                <lable>6am - 10pm</lable>
+                <lable></lable>
+              </div>
+            </div>
+            <div className='detailMe-media'>
               <a  href='#' className='twitter'>
                 <img src="/twitter.png" alt="twitter" />
               </a>
@@ -42,19 +105,22 @@ function Garage() {
           </div>
           <div className='schedule-box'>
             <form>
+              <div className='fee'>Reservation Fee: $30 CAD</div>
               <input id='sName' type='text' name='sName' placeholder='Enter your name'/>
               <input id='sCarDetail' type='text' name='sCarDetail' placeholder='Enter car name & model'/>
-              <div className='select-day'>
-                <label>Select a day</label>
-                <label>26/12/2023</label>
+              <div onClick={()=>{}} className='select-day'>
+                <label className='selector'>Select a day</label>
+                <label className='date'>26/12/2023</label>
               </div>
+              <input id='sDescription' type='text' name='sDesc' placeholder='Define your Issue with the car'/>
               <button type='submit'>Schedule</button>
             </form>
           </div>
         </div>
         <div className='service-section'>
-          <p className='deliverable-lable'>Deliverable Services</p>
+          <Services lable={"Experties"} services={services} />
           <div className='deliverables-section'>
+            <p className='deliverable-lable'>Deliverable Services</p>
             <div className='deliverables'>
               <div className='deliverable'>
                 <span class="material-symbols-outlined">check_circle</span>
@@ -90,11 +156,8 @@ function Garage() {
               </div>
             </div>
           </div>
-          <Services lable={"Experties"} services={services} />
         </div>
         <div className='review-section'></div>
-        <div></div>
-        <div></div>
       </div>
     </div>
   )

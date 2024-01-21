@@ -1,5 +1,6 @@
 import React from 'react'
 import '../css/Services.css'
+import { Link } from 'react-router-dom'
 
 function Services({lable,services}) {
   return (
@@ -9,10 +10,12 @@ function Services({lable,services}) {
         {
           services.map((service)=>{
             return (
-              <div className='service'>
-                <img src={service.src} alt="" />
-                <div className='service-name'>{service.serviceName}</div>
-              </div>
+              <Link to={`/services/${service.serviceName}`} className='link'>
+                <div className='service'>
+                  <img src={service.src} alt="" />
+                  <div className='service-name'>{service.serviceName}</div>
+                </div>
+              </Link>
             )
           })
         }

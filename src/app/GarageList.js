@@ -3,7 +3,7 @@ import {useState,useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import '../css/GarageList.css'
 
-function GarageList() {
+function GarageList({headline}) {
   const [data,setData] = useState([])
   const [listStyle,setListStyle] = useState({
     overflowX:'auto'
@@ -32,7 +32,7 @@ function GarageList() {
 
   return (
     <div className='list'>
-      <p className='lable-rated'>Top Rated Auto Centers</p>
+      <p className='lable-rated'>{headline}</p>
       <div className='garage-list' style={listStyle}>
         {data.map((garage)=>{
             return (

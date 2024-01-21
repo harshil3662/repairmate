@@ -11,9 +11,7 @@ function Navbar() {
             <label className='lable-2'>mate</label>
           </div>
           <div className='logo'>
-            <span class="material-symbols-outlined">
-            construction
-            </span>
+            <img src='/settings.png'/>
           </div>
         </div>
         <div className='nav-right'>

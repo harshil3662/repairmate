@@ -6,6 +6,10 @@
     text-align: center;
 }
 
+.link{
+    text-decoration: none;
+}
+
 .service-list{
     display: flex;
     flex-direction: row;
@@ -30,7 +34,8 @@
 }
 
 .service:hover{
-    box-shadow: 0.2em 0.2em 1em #C0C0C0;
+    background-color: #F8F8FF;
+    box-shadow: 0.2em 0.2em 1em #8f8f8f;
 }
 
 .service img{
@@ -43,4 +48,5 @@
     text-align: center;
     font-size: 1em;
     font-weight: bold;
+    color: black;
 }

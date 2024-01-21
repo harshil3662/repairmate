@@ -4,6 +4,7 @@ import Layout from "./app/Layout"
 import { BrowserRouter as Router,Routes,Route } from "react-router-dom"
 import Signin from "./app/Signin"
 import Signup from "./app/Signup"
+import Listing from "./app/Listing"
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="garage/:garageId" element={<Garage />}/>
+            <Route path="services/:service" element={<Listing />}/>
           </Route>
 
           <Route path="signin" element={<Signin />} />

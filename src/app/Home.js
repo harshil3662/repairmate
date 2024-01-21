@@ -24,8 +24,9 @@ function Home() {
         <Services lable={"Popular Car Services"} services={services}/>
       </div>
       <div className='container-3'>
-        <GarageList/>
-        <GarageList/>
+        <GarageList headline={"Top Rated Auto Centers"}/>
+        <GarageList headline={"Best centers of the week"}/>
+        <GarageList headline={"Top of the season"}/>
       </div>
     </div>
   )

@@ -41,9 +41,7 @@ function Signup() {
             <label className='mate'>mate</label>
           </div>
           <div className='icon'>
-            <span class="material-symbols-outlined">
-            construction
-            </span>
+            <img src='/settings.png'/>
           </div>
         </div>
 
