@@ -20,6 +20,7 @@
 
 .link{
     text-decoration: none;
+    cursor: default;
 }
 
 .garage-box{
@@ -30,13 +31,8 @@
     border-radius: 1em;
     width: 400px;
     height: 250px;
-}
-
-.garage{
+    cursor: pointer;
     position: relative;
-    background-color: white;
-    transition: width 0.3s, height 0.3s;
-    height: 100%;
 }
 
 .garage-box:hover{
@@ -109,8 +105,9 @@
 }
 
 .div4{
+    padding-right: 2em;
     position: absolute;
-    bottom: 0em;
+    bottom: 1em;
     font-size: 0.8em;
     color: black;
     width: 100%;

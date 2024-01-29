@@ -1,6 +1,7 @@
 import '../css/Listing.css'
 import { useEffect,useState } from 'react'
 import { Link } from 'react-router-dom'
+import Searchbar from './Searchbar'
 
 function Listing() {
     const [data,setData] = useState([])
@@ -23,6 +24,7 @@ function Listing() {
 
     return (
         <div>
+            <Searchbar/>
             <div className='listing'>
                 {data.map((garage)=>{
                     return (
