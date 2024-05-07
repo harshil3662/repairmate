@@ -1,68 +1,37 @@
-.searchbar-container{
-    margin-top: 1em;
-    padding: 1em;
-    display: grid;
-    place-items: center;
+.searchbar{
+    width: 700px;
+    height: 60px;
 }
 
-.searchBar{
-    padding: 0.3em;
-    display: grid;
-    grid-template-columns: 70% 25%;
-    column-gap: 5%;
-    width: 50vw;
-    height: fit-content;
-    border-radius: 5em;
-    border: 1px solid rgb(213, 213, 213);
-    box-shadow: 0.1em 0.1em 0.5em rgba(215, 215, 215, 0.9);
-    background-color: white;
-}
-
-.input-box{
+.inputbox-div{
+    height: 100%;
     width: 100%;
-    border-radius: 1em;
-    border: 1px solid white;
-    padding: 0.5em;
-    font-size: 1.2em;
+}
+
+.inputbox{
+    border-top-left-radius: 1.5em;
+    border-top-right-radius: 0em;
+    border-bottom-left-radius: 1.5em;
+    border-bottom-right-radius: 0em;
+    border: 1.5px solid #D3D3D3;
+    width: 100%;
     height: 100%;
 }
 
-.input-box::placeholder{
-    font-size: 0.9em;
-    color: #909497;
-    font-weight: 100;
-}
-
-.input-box:focus{
-    outline: none;
-}
-
-.search-btn {
-    float: right;
-    padding: 1em;
-    border-radius: 5em;
-    background-image: linear-gradient(to bottom right, #9370DB, #663399);
-    border: 1px solid #764ec4;
-    color: white;
-    cursor: pointer;
-    box-shadow: none;
+.search-btn-div{
     height: 100%;
-    transition: width 1s ease;
+    width: 100%;
 }
 
-.search-lable-div{
-    display: grid;
-    grid-template-columns: auto auto;
-    place-items: center;
-    font-size: 1.2em;
-}
-
-.search-icon{
+.search-btn{
+    border-top-left-radius: 0em;
+    border-top-right-radius: 1.5em;
+    border-bottom-left-radius: 0em;
+    border-bottom-right-radius: 1.5em;
+    border: 1px solid #F16051;
+    height: 100%;
+    width: 100%;
+    background-color: #F16051;
     font-weight: bold;
-}
-
-.search-lable-div > label{
-    font-weight: bold;
-    font-size: 1.2em;
-    cursor: pointer;
+    font-size: large;
 }

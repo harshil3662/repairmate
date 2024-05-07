@@ -7,7 +7,7 @@ import '../css/Layout.css'
 function Layout() {
 
   return (
-    <div className="container">
+    <div>
         <Navbar/>
         <Outlet/>
         <Footer/>

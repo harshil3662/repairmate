@@ -18,16 +18,12 @@ function Home() {
   ]
 
   return (
-    <div>
+    <div className='container'>
       <Searchbar/>
-      <div className='container-2'>
-        <Services lable={"Popular Car Services"} services={services}/>
-      </div>
-      <div className='container-3'>
-        <GarageList headline={"Top Rated Auto Centers"}/>
-        <GarageList headline={"Best centers of the week"}/>
-        <GarageList headline={"Top of the season"}/>
-      </div>
+      <Services lable={"Popular Car Services"} services={services}/>
+      <GarageList headline={"Top Rated Auto Centers"}/>
+      <GarageList headline={"Best centers of the week"}/>
+      <GarageList headline={"Top of the season"}/>
     </div>
   )
 }
