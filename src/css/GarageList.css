@@ -1,93 +1,150 @@
-.garage-list{
-    margin: 2em;
-    border-radius: 1em;
-    overflow: auto;
-    box-shadow: 0.3em 0.3em 0.6em 0.2em rgb(215, 215, 215);
-}
-
-.garage-list:hover{
-    box-shadow: 0.3em 0.3em 0.9em 0.5em rgb(206, 206, 206);
-}
-
-.garage{
+.list{
     margin: 1em;
-    padding: 0.4em;
-    border: 1px solid rgb(244, 240, 244);
-    border-radius: 0.5em;
+    padding: 1em;
     display: grid;
-    grid-template-rows: auto auto auto;
-    row-gap: 0.2em;
+    grid-template-rows: auto auto;
+    row-gap: 0.5em;
 }
 
-.garage:hover{
-    background-color: #ebeef1;
+.lable-rated{
+    padding-left: 0.5em;
+    font-family: 'Kalnia';
+    font-size: 2em;
+}
+
+.garage-list{
+    border-radius: 1em;
+    overflow-x: auto;
+    height: fit-content;
+}
+
+.link{
+    text-decoration: none;
+    cursor: default;
+}
+
+.garage-box{
+    margin: 1em;
+    padding: 1em;
+    background-color: white;
+    border: 1px solid #D3D3D3;
+    border-radius: 1em;
+    width: 400px;
+    height: 250px;
+    cursor: pointer;
+    position: relative;
+}
+
+.garage-box:hover{
+    box-shadow: 0.2em 0.2em 1em #A9A9A9;
 }
 
 .div1{
     display: grid;
     grid-template-columns: auto auto;
-    place-items: center;
-    width: fit-content;
-    column-gap: 0.5em;
-    margin-bottom: 0.5em;
-    color: rgb(83, 16, 83);
-}
-
-.garage-icon{
-    color: black;
+    width: 100%;
+    height: fit-content;
 }
 
 .garageName{
-    font-size: 1.2em;
+    float: left;
+}
+
+.gName{
+    font-size: 1.4em;
     font-weight: 900;
     text-decoration: none;
     color: black;
 }
-.garageName:hover{
-    text-decoration: underline;
+
+.garagaRate{
+    float: right;
+    display: grid;
+    grid-template-columns: auto auto;
+    color: black;
+    column-gap: 0.1em;
+    height: 100%;
+}
+
+.garagaRate > .material-symbols-outlined{
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 40;
+    font-size: 1.2em;
+    color: #764ec4;
+}
+
+.rate{
+    padding: 0.1em;
+    font-size: 1.2em;
+    height: 100%;
+    color: black;
 }
 
 .div2{
-    display: grid;
-    grid-template-columns: auto auto;
-    place-items: center;
-    width: fit-content;
-    column-gap: 0.5em;
-    color: rgb(129, 65, 129);
-    margin-bottom: 0.5em;
-    font-size: 1.1em;
-}
-
-.location-icon{
-    color: rgb(80, 80, 80);
-}
-
-.location{
-    color: rgb(80, 80, 80);
-    text-decoration: none;
-}
-.location:hover{
-    text-decoration: underline;
+    margin-top: 0.3em;
+    font-size: 1em;
+    font-weight: 300;
+    color: black;
 }
 
 .div3{
+    margin-top: 1.5em;
+}
+
+.div3 > h3{
+    color: #764ec4;
+}
+
+.services{
+    font-size: 0.8;
+    font-weight: 300;
+    color: black;
+}
+
+.div4{
+    padding-right: 2em;
+    position: absolute;
+    bottom: 1em;
+    font-size: 0.8em;
+    color: black;
+    width: 100%;
+}
+
+.email-box{
+    float: left;
     display: grid;
     grid-template-columns: auto auto;
-    font-size: 1em;
-    color: rgb(113, 92, 113);
-    place-items: center;
+    column-gap: 0.3em;
     width: fit-content;
-    column-gap: 0.5em;
+    height: fit-content;
 }
 
-.mail-icon{
-    color: #6c757d;
+.email-box > .material-symbols-outlined{
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 40;
+    font-size: 1em;
 }
 
-.email{
-    color: #6c757d;
-    text-decoration: none;
+.number-box{
+    float: right;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 0.3em;
+    width: fit-content;
+    height: fit-content;
 }
-.email:hover{
-    text-decoration: underline;
+
+.number-box > .material-symbols-outlined{
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 40;
+    font-size: 1em;
 }

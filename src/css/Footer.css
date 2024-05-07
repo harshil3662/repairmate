@@ -6,5 +6,12 @@
     place-items: center;
     column-gap: 1em;
     height: fit-content;
-    background-color: #dee2e6;
+    background-color: #9370DB;
+}
+
+a{
+    color: white;
+    font-size: 1em;
+    font-weight: 300;
+    text-decoration: none;
 }
