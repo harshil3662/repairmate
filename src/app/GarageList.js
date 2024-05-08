@@ -25,24 +25,31 @@ function GarageList({headline}) {
   return (
     <div className='container-fluid m-3'>
       <p className='list-headline fs-1'>{headline}</p>
-      <div className='list row d-flex flex-nowrap overflow-scroll mt-2'>
+      <div className='list row d-flex flex-nowrap overflow-scroll mt-2 p-2'>
         {
           data.map((garage)=>{
             return(
               <Link to={`/garage/${garage._id}`} state={{garage}} className='col link m-1'>
-                <div class="card border-secondary mb-3">
-                  <h5 class="card-header border-secondary card-title">{garage.name}</h5>
-                  <div class="card-body text-secondary">
-                    <h5 class="card-title">Top services</h5>
+                <div className="card border-secondary mb-3">
+                  <div class="card-header border-secondary fw-bold fs-5">{garage.name}</div>
+                  <div className="card-body text-secondary">
+                    <h5 className="card-title">Top services</h5>
                     <ul>
                       <li>Auto engine diagnostic</li>
                       <li>Air & cabin filter replacement</li>
                       <li>Electrical</li>
                       <li>Oil change</li>
-                      <li>Engine repair</li>
                     </ul>
                   </div>
-                  <div class="card-footer bg-transparent border-secondary">Footer</div>
+                  <div className="card-footer bg-transparent border-secondary">
+                    <div className='location float-start d-flex justify-content-center align-items-center'>
+                      <span className="material-symbols-outlined fs-5 pe-1">location_on</span>
+                      <span>{garage.location}</span>
+                    </div>
+                    <div className='float-end mail'>
+                      <span className="material-symbols-outlined fs-5">mail</span>
+                    </div>
+                  </div>
                 </div>
               </Link>
             )
