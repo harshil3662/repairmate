@@ -1,12 +1,12 @@
 *{
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Josefin Sans';
+    font-family: "Lato", sans-serif;
 }
 
 .navbar{
-    background-color: #F5F5F5;
-    border-bottom: 1px solid #D3D3D3;
+    background-color: #efefef;
+    border-bottom: 1px solid #C0C0C0;
 }
 
 .lable-1{
@@ -42,12 +42,6 @@
     height: 100%;
 }
 
-.msg{
-    color: black;
-    font-weight: 500;
-    font-weight: bold;
-}
-
 .car{
     font-size: 3em;
     color: #F16051;
@@ -57,8 +51,6 @@
     background-color: #f7a015;
     color: #000000;
     font-size: large;
-    font-weight: bold;
-    font-weight: bold;
     padding: 0.5em;
     border: 1px solid #f7a015;
     border-radius: 1em;
@@ -72,6 +64,7 @@
     color: #000000;
     border: 1px solid #f7a015;
     transform: scale(1.05);
+    box-shadow: 3px 3px 10px #808080;
 }
 
 .setting .material-symbols-outlined{

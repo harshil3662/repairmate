@@ -1,4 +1,18 @@
+.list-headline{
+    font-family: 'Kalnia';
+}
+
 .list{
+    height: 300px;
+}
+
+.card{
+    width: 300px;
+    height: 100%;
+    border: 1px solid gray;
+}
+
+/* .list{
     margin: 1em;
     padding: 1em;
     display: grid;
@@ -147,4 +161,4 @@
     'GRAD' 0,
     'opsz' 40;
     font-size: 1em;
-}
+} */

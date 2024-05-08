@@ -11,21 +11,16 @@
 }
 
 .service{
-    margin: 1em;
-    padding: 1em;
     width: 160px;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     border-radius: 1.5em;
     background-color: white;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .service:hover{
-    background-color: #F8F8FF;
-    box-shadow: 0.2em 0.2em 1em #8f8f8f;
+    transform: scale(1.1);
+    background-color: #FFF5EE;
 }
 
 .svc-name{

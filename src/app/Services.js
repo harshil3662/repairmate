@@ -6,7 +6,7 @@ function Services({lable,services}) {
   return (
     <div className='services container mt-5'>
       <div className='row'>
-        <h1 className='lable-services'>{lable}</h1>
+        <h1 className='lable-services fs-1'>{lable}</h1>
       </div>
       <div className='row'>
         <div className='container d-flex justify-content-center align-items-center flex-wrap'>
@@ -14,11 +14,11 @@ function Services({lable,services}) {
             services.map((service)=>{
               return (
                 <Link to={`/services/${service.serviceName}`} className='link'>
-                  <div className='service'>
+                  <div className='service m-3 p-3'>
                     <div className='row'>
                       <img className='img-fluid' src={service.src} alt=""/>
                     </div>
-                    <div className='row'>
+                    <div className='row mt-2'>
                       <div className='svc-name'>{service.serviceName}</div>
                     </div>
                   </div>

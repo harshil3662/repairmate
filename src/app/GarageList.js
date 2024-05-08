@@ -5,9 +5,6 @@ import '../css/GarageList.css'
 
 function GarageList({headline}) {
   const [data,setData] = useState([])
-  const [listStyle,setListStyle] = useState({
-    overflowX:'auto'
-  })
 
   useEffect(()=>{
     fetch('http://localhost:8080/garages')
@@ -19,11 +16,6 @@ function GarageList({headline}) {
         })
         .then((responseData) => {
           setData(responseData.list)
-          setListStyle({
-            ...listStyle,
-            display:'grid',
-            gridTemplateColumns:`repeat(${data.length}, 1fr)`
-          })
         })
         .catch((err) => {
           console.log(err)
@@ -31,8 +23,33 @@ function GarageList({headline}) {
   },[data])
 
   return (
-    <div className='list'>
-      <p className='lable-rated'>{headline}</p>
+    <div className='container-fluid m-3'>
+      <p className='list-headline fs-1'>{headline}</p>
+      <div className='list row d-flex flex-nowrap overflow-scroll mt-2'>
+        {
+          data.map((garage)=>{
+            return(
+              <Link to={`/garage/${garage._id}`} state={{garage}} className='col link m-1'>
+                <div class="card border-secondary mb-3">
+                  <h5 class="card-header border-secondary card-title">{garage.name}</h5>
+                  <div class="card-body text-secondary">
+                    <h5 class="card-title">Top services</h5>
+                    <ul>
+                      <li>Auto engine diagnostic</li>
+                      <li>Air & cabin filter replacement</li>
+                      <li>Electrical</li>
+                      <li>Oil change</li>
+                      <li>Engine repair</li>
+                    </ul>
+                  </div>
+                  <div class="card-footer bg-transparent border-secondary">Footer</div>
+                </div>
+              </Link>
+            )
+          })
+        }
+      </div>
+      {/* <p className='lable-rated'>{headline}</p>
       <div className='garage-list' style={listStyle}>
         {data.map((garage)=>{
             return (
@@ -76,7 +93,7 @@ function GarageList({headline}) {
               </Link>
             )
         })}
-      </div>
+      </div> */}
     </div>
   )
 }

@@ -18,7 +18,7 @@ function Home() {
   ]
 
   return (
-    <div className='container'>
+    <div className='container-fluid'>
       <Searchbar/>
       <Services lable={"Popular Car Services"} services={services}/>
       <GarageList headline={"Top Rated Auto Centers"}/>

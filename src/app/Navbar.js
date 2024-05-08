@@ -4,10 +4,10 @@ import '../css/Navbar.css'
 
 function Navbar() {
     return (
-      <nav className='sticky-top'>
+      <nav>
         <div className='navbar'>
           <div className='container-fluid'>
-            <div className='col-5'>
+            <div className='col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-8 col-8'>
               <div className='row d-flex justify-content-start align-items-center'>
                 <div className='container-fluid d-flex justify-content-start align-items-center'>
                   <div className='m-1'>
@@ -15,22 +15,26 @@ function Navbar() {
                     <label className='lable-2'>mate</label>
                   </div>
                   <div className='logo m-1'>
-                    <img src='/settings.png'/>
+                    <img className='img-fluid' src='settings.png'/>
                   </div>
                 </div>
               </div>
             </div>
-            <div className='col-5'>
+            <div className='col-5 col-xl-5 col-lg-5 col-md-5 col-sm-2 col-2'>
               <div className='row d-flex justify-content-end align-items-center'>
                 <div className='container d-flex justify-content-end align-items-center'>
                   <div className='col-8 d-none d-sm-none d-md-none d-lg-none d-xl-flex d-xxl-flex 
-                    justify-content-xl-end justify-content-xxl-end align-items-xl-center align-items-xxl-end m-1'>
-                    <span className='msg p-1 pe-2'>Let's get your</span>
+                    justify-content-xl-end justify-content-xxl-end align-items-xl-end align-items-xxl-end m-1'>
+                    <span className='fw-bold p-1 pe-2'>Let's get your</span>
                     <span className="car material-symbols-outlined">toys</span> 
-                    <span className='msg p-1 ps-2'>back on Track</span>
+                    <span className='fw-bold p-1 ps-2'>back on Track</span>
                   </div>
                   <div className='col-2 d-none d-sm-none d-md-none d-lg-none d-xl-block d-xxl-block'>
-                    <Link className='nav-btn d-flex justify-content-center align-items-center m-1' to='/signin'>Sign In</Link>
+                    <Link 
+                      className='nav-btn d-flex justify-content-center align-items-center fw-bold text-xl m-1' 
+                      to='/signin'>
+                        Sign In
+                    </Link>
                   </div>
                   <div className='col-1 setting d-flex justify-content-center align-items-center m-1'>
                     <span className="material-symbols-outlined">
