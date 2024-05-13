@@ -11,8 +11,8 @@ function Navbar() {
               <div className='row d-flex justify-content-start align-items-center'>
                 <div className='container-fluid d-flex justify-content-start align-items-center'>
                   <div className='m-1'>
-                    <label className='lable-1'>Repair</label>
-                    <label className='lable-2'>mate</label>
+                    <label className='lable-1 fw-bold fs-2'>Repair</label>
+                    <label className='lable-2 fw-bold fs-1'>mate</label>
                   </div>
                   <div className='logo m-1'>
                     <img className='img-fluid' src='settings.png'/>

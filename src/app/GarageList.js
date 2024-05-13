@@ -24,15 +24,15 @@ function GarageList({headline}) {
 
   return (
     <div className='container-fluid m-3'>
-      <p className='list-headline fs-1'>{headline}</p>
+      <h3 className='list-headline fs-1'>{headline}</h3>
       <div className='list row d-flex flex-nowrap overflow-scroll mt-2 p-2'>
         {
           data.map((garage)=>{
             return(
               <Link to={`/garage/${garage._id}`} state={{garage}} className='col link m-1'>
                 <div className="card border-secondary mb-3">
-                  <div class="card-header border-secondary fw-bold fs-5">{garage.name}</div>
-                  <div className="card-body text-secondary">
+                  <div className="card-header d-flex justify-content-start align-items-center garage-name pt-2 ps-3 fw-bold fs-5">{garage.name}</div>
+                  <div className="card-body">
                     <h5 className="card-title">Top services</h5>
                     <ul>
                       <li>Auto engine diagnostic</li>
@@ -42,11 +42,15 @@ function GarageList({headline}) {
                     </ul>
                   </div>
                   <div className="card-footer bg-transparent border-secondary">
-                    <div className='location float-start d-flex justify-content-center align-items-center'>
-                      <span className="material-symbols-outlined fs-5 pe-1">location_on</span>
-                      <span>{garage.location}</span>
+                    <div className='float-start d-flex justify-content-center align-items-center'>
+                      <div className='location-icon d-flex justify-content-center align-items-center'>
+                        <span className="material-symbols-outlined fs-5 pe-1">location_on</span>
+                      </div>
+                      <div className='location d-flex justify-content-center align-items-center fs-6'>
+                        <span>{garage.location}</span>
+                      </div>
                     </div>
-                    <div className='float-end mail'>
+                    <div className='float-end d-flex justify-content-center align-items-center mail'>
                       <span className="material-symbols-outlined fs-5">mail</span>
                     </div>
                   </div>
@@ -56,51 +60,6 @@ function GarageList({headline}) {
           })
         }
       </div>
-      {/* <p className='lable-rated'>{headline}</p>
-      <div className='garage-list' style={listStyle}>
-        {data.map((garage)=>{
-            return (
-              <Link to={`/garage/${garage._id}`} state={{garage}} className='link'>
-                <div className="garage-box" key={garage._id}>
-                  <div className='div1'>
-                    <div className='garageName'>
-                      <p className='gName'>{garage.name}</p>
-                    </div>
-                    <div className='garageRating'>
-                      <div className='garagaRate'>
-                        <span class="material-symbols-outlined">star</span>
-                        <div className='rate'>4.9</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='div2'>
-                    <p className='location'>{garage.location}, Toronto, On</p>
-                  </div>
-                  <div className='div3'>
-                    <h3>Best at:</h3>
-                    <ul className='services'>
-                      <li>Auto engine diagnostic</li>
-                      <li>Air & cabin filter replacement</li>
-                      <li>Electrical</li>
-                      <li>Oil change</li>
-                      <li>Engine repair</li>
-                    </ul>
-                  </div>
-                  <div className='div4'>
-                    <div className='email-box'>
-                      <span class="material-symbols-outlined">mail</span>
-                      <div className='email'> {garage.email}</div>
-                    </div>
-                    <div className='number-box'>
-                      <span class="material-symbols-outlined">call</span>
-                      <div className='number'>(647) 829-0551</div>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            )
-        })}
-      </div> */}
     </div>
   )
 }
