@@ -6,7 +6,8 @@ import '../css/Garage.css'
 
 function Garage() {
 
-  const [star,setStar] = useState(4.9)
+  const location = useLocation();
+  const { garage } = location.state;
 
   const services = [
     {src:'/car.png',serviceName:'Car Inspection'},
@@ -21,12 +22,42 @@ function Garage() {
   });
 
   return (
-    <div>
+    <div className='container'>
       <Searchbar/>
+      <div className='garage col'>
+        <div className='row d-flex justify-content-between align-items-center'>
+          <div className='col-5'>
+            <div className=''>{garage.name}</div>
+          </div>
+          <div className='col-2 d-flex flex-column justify-content-end align-items-center'>
+            <div>
+              <img className='img img-fluid' src='/medal.png' alt=""/>
+            </div>
+            <div>Since 1998</div>
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col'>
+
+          </div>
+          <div className='col'>
+
+          </div>
+        </div>
+        <div className='row'>
+
+        </div>
+        <div className='row'>
+          <Services lable={"Experties"} services={services} />
+        </div>
+        
+        <Services lable={"Experties"} services={services} />
+      </div>
+      {/* <Searchbar/>
       <div className='garage-details'>
         <div className='name-star-experty'>
           <div className='name-star'>
-            <div className='garage-name'>Peter's Garage For Imports</div>
+            <div className='garage-name'>{garage.name}</div>
             <div className='garage-star'>
               <div className='counted-star'>
                 <span class="material-symbols-outlined">star_rate</span>
@@ -35,7 +66,7 @@ function Garage() {
                 <span class="material-symbols-outlined">star_rate</span>
                 <span class="material-symbols-outlined">star_rate</span>
               </div>
-              <div className="counted-star-no">{star}</div>
+              <div className="counted-star-no">4.9</div>
             </div>
           </div>
           <div className='experience'>
@@ -158,7 +189,7 @@ function Garage() {
           </div>
         </div>
         <div className='review-section'></div>
-      </div>
+      </div> */}
     </div>
   )
 }

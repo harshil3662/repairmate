@@ -19,7 +19,7 @@ function Services({lable,services}) {
                       <img className='img-fluid' src={service.src} alt=""/>
                     </div>
                     <div className='row mt-2'>
-                      <div className='svc-name'>{service.serviceName}</div>
+                      <div className='svc-name fw-bold'>{service.serviceName}</div>
                     </div>
                   </div>
                 </Link>
