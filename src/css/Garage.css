@@ -1,7 +1,50 @@
+.garage-header{
+    background-color: white;
+}
+
+.garage-name{
+    font-weight: 400;
+}
+
 .img{
     width: 50px;
     height: 50px;
 }
+
+.star{
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    font-size: 1.2em;
+}
+
+.experties{
+    font-size: 1em;
+}
+
+.location{
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
+
+.call{
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
+
+.img{
+    width: 30px;
+    height: 30px;
+}
+
 
 /* .garage-details{
     display: flex;

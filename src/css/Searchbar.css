@@ -3,10 +3,11 @@
     height: 70px;
     border-radius: 2em;
     transition: 0.2s;
+    box-shadow: 2px 2px 5px #D3D3D3;
 }
 
 .searchbar:hover{
-    box-shadow: 3px 3px 10px #D3D3D3;
+    box-shadow: 4px 4px 10px #D3D3D3;
 }
 
 .inputbox-div{
@@ -55,5 +56,10 @@
 
 .find{
     font-size: 1.25em;
-    font-weight: bold;
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 700,
+    'GRAD' 0,
+    'opsz' 24;
+    font-size: 1.2em;
 }

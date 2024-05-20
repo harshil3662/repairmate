@@ -32,7 +32,7 @@ function GarageList({headline}) {
               <Link to={`/garage/${garage._id}`} state={{garage}} className='col link m-1'>
                 <div className="card border-secondary mb-3">
                   <div className="card-header d-flex justify-content-start align-items-center garage-name pt-2 ps-3 fw-bold">
-                    <div className='garage-name fs-5'>{garage.name}</div>
+                    <div className='card-name fs-5'>{garage.name}</div>
                   </div>
                   <div className="card-body">
                     <h6 className="top-services-heading ">Top services</h6>

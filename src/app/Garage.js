@@ -5,9 +5,22 @@ import { useLocation} from "react-router-dom"
 import '../css/Garage.css'
 
 function Garage() {
-
+  const date = new Date();
+  const day = date.getDay();
   const location = useLocation();
   const { garage } = location.state;
+  const [schedule,setSchedule] = useState(
+    [
+      {day:'Sunday',timing:'6am - 10pm',id:0},
+      {day:'Monday',timing:'6am - 10pm',id:1},
+      {day:'Tuesday',timing:'6am - 10pm',id:2},
+      {day:'Wednesday',timing:'6am - 10pm',id:3},
+      {day:'Thursday',timing:'6am - 10pm',id:4},
+      {day:'Friday',timing:'6am - 10pm',id:5},
+      {day:'Saturday',timing:'6am - 10pm',id:6}
+      
+    ]
+  )
 
   const services = [
     {src:'/car.png',serviceName:'Car Inspection'},
@@ -22,26 +35,69 @@ function Garage() {
   });
 
   return (
-    <div className='container'>
+    <div className='container-fluid'>
       <Searchbar/>
-      <div className='garage col'>
-        <div className='row d-flex justify-content-between align-items-center'>
-          <div className='col-5'>
-            <div className=''>{garage.name}</div>
+      <div className='garage col mt-4'>
+        <div className='row garage-header position-sticky top-0 p-2 border-bottom d-flex justify-content-between align-items-center'>
+          <div className='col-9 d-flex justify-content-start align-items-center'>
+            <span className='me-3 fw-bold fs-3'>{garage.name}</span>
+            <span className='fs-5'>4.9</span>
+            <span className="fs-5 star material-symbols-outlined">grade</span>
           </div>
-          <div className='col-2 d-flex flex-column justify-content-end align-items-center'>
-            <div>
+          <div className='col-xxl-1 col-xl-2 col-lg-2 col-md-2 col-sm-3 col-3 d-flex flex-column justify-content-end align-items-center'>
+            <div className=''>
               <img className='img img-fluid' src='/medal.png' alt=""/>
             </div>
-            <div>Since 1998</div>
+            <span className='experties'>Since 1998</span>
           </div>
         </div>
-        <div className='row'>
-          <div className='col'>
-
+        <div className='row mt-4'>
+          <div className='col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 d-flex justify-content-center align-items-center'>
+            <div>
+              <div className='m-2 d-flex justify-content-start align-items-center'>
+                <span class="location me-2 fs-5 material-symbols-outlined">location_on</span>
+                <span className='fs-5'>160 Canon Jackson Dr, York, Toronto, M6M 0B6</span>
+              </div>
+              <div className='m-2 d-flex justify-content-start align-items-center'>
+                <span class="call me-2 fs-5 material-symbols-outlined">call</span>
+                <span className='fs-5'>+1 (647) 829-0551</span>
+              </div>
+              <div className='ms-2 mt-4 mb-2'>
+                {schedule.map((d)=>{
+                  return (
+                    <div className='row m-1'>
+                      <span className={`col-3 p-1 text-center ${day===d.id ? 'rounded-start border-2 border-start border-top border-bottom' : ''}`}>{d.day}</span>
+                      <span className={`col-3 p-1 text-center ${day===d.id ? 'border-2 border-top border-bottom' : ''}`}>{d.timing}</span>
+                      <span className={`col-3 p-1 text-center ${day==d.id ? 'rounded-end border-2 border-end border-top border-bottom text-success' : ''}`}>{day==d.id ? 'open' : ''}</span>
+                    </div>
+                  )
+                })}
+              </div>
+              <div className='mt-3 d-flex justify-content-start align-items-center'>
+                <a href='#' className='m-2'>
+                  <img className='img-fluid img' src="/twitter.png" alt="twitter" />
+                </a>
+                <a href='#' className='m-2'>
+                  <img className='img-fluid img' src="/facebook.png" alt="facebook" />
+                </a>
+                <a href='#' className='m-2'>
+                  <img className='img-fluid img' src="/instagram.png" alt="instagram" />
+                </a>
+              </div>
+            </div>
           </div>
-          <div className='col'>
-
+          <div className='col-6 d-flex justify-content-center align-items-center'>
+            <form>
+              <div className='fee'>Reservation Fee: $30 CAD</div>
+              <input id='sName' type='text' name='sName' placeholder='Enter your name'/>
+              <input id='sCarDetail' type='text' name='sCarDetail' placeholder='Enter car name & model'/>
+              <div onClick={()=>{}} className='select-day'>
+                <label className='selector'>Select a day</label>
+                <label className='date'>26/12/2023</label>
+              </div>
+              <input id='sDescription' type='text' name='sDesc' placeholder='Define your Issue with the car'/>
+              <button type='submit'>Schedule</button>
+            </form>
           </div>
         </div>
         <div className='row'>

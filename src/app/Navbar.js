@@ -7,7 +7,7 @@ function Navbar() {
       <nav>
         <div className='navbar'>
           <div className='container-fluid'>
-            <div className='col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-8 col-8'>
+            <div className='col-5'>
               <div className='row d-flex justify-content-start align-items-center'>
                 <div className='container-fluid d-flex justify-content-start align-items-center'>
                   <div className='m-1'>
@@ -20,14 +20,14 @@ function Navbar() {
                 </div>
               </div>
             </div>
-            <div className='col-5 col-xl-5 col-lg-5 col-md-5 col-sm-2 col-2'>
+            <div className='col-5'>
               <div className='row d-flex justify-content-end align-items-center'>
                 <div className='container d-flex justify-content-end align-items-center'>
                   <div className='col-8 d-none d-sm-none d-md-none d-lg-none d-xl-flex d-xxl-flex 
                     justify-content-xl-end justify-content-xxl-end align-items-xl-end align-items-xxl-end m-1'>
-                    <span className='fw-bold p-1 pe-2'>Let's get your</span>
+                    <span className='line p-1 pe-2'>Let's get your</span>
                     <span className="car material-symbols-outlined">toys</span> 
-                    <span className='fw-bold p-1 ps-2'>back on Track</span>
+                    <span className='line p-1 ps-2'>back on Track</span>
                   </div>
                   <div className='col-2 d-none d-sm-none d-md-none d-lg-none d-xl-block d-xxl-block'>
                     <Link 
@@ -36,8 +36,8 @@ function Navbar() {
                         Sign In
                     </Link>
                   </div>
-                  <div className='col-1 setting d-flex justify-content-center align-items-center m-1'>
-                    <span className="material-symbols-outlined">
+                  <div className='col-1 d-flex justify-content-center align-items-center m-1'>
+                    <span className="fs-2 setting material-symbols-outlined">
                       menu
                     </span>
                   </div>
