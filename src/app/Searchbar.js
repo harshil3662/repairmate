@@ -16,9 +16,9 @@ function Searchbar() {
         </div>
         <div className='search-btn-div col-2'>
           <button className='search-btn' type='submit' onSubmit={()=>{}}>
-            <lable className="d-flex justify-content-center align-items-center">
+            <div className="d-flex fs-5 justify-content-center align-items-center">
               <span class="material-symbols-outlined find">search</span> Search
-            </lable>
+            </div>
           </button>
         </div>
       </div>
