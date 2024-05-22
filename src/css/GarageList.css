@@ -18,7 +18,7 @@
 
 .card:hover{
     transform: scale(1.05);
-    box-shadow: 3px 3px 7.5px 2.25px #C0C0C0;
+    box-shadow: 3px 3px 7.5px 2.25px #DCDCDC;
 }
 
 .card-name{

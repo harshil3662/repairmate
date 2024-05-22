@@ -40,11 +40,11 @@
     border-top-right-radius: 1.5em;
     border-bottom-left-radius: 0em;
     border-bottom-right-radius: 1.5em;
-    border: 1px solid #F16051;
+    border: 1px solid #f66b5b;
     height: 100%;
     width: 100%;
-    background-color: #F16051;
-    font-weight: bold;
+    background-color: #f66b5b;
+    font-weight: 400;
     font-size: large;
     transition: 0.2s;
 }
@@ -58,7 +58,7 @@
     font-size: 1.25em;
     font-variation-settings:
     'FILL' 1,
-    'wght' 700,
+    'wght' 400,
     'GRAD' 0,
     'opsz' 24;
     font-size: 1.2em;

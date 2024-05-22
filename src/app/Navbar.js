@@ -31,7 +31,7 @@ function Navbar() {
                   </div>
                   <div className='col-2 d-none d-sm-none d-md-none d-lg-none d-xl-block d-xxl-block'>
                     <Link 
-                      className='nav-btn d-flex justify-content-center align-items-center fw-bold text-xl m-1' 
+                      className='nav-btn d-flex justify-content-center align-items-center text-xl m-1' 
                       to='/signin'>
                         Sign In
                     </Link>

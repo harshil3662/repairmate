@@ -6,7 +6,7 @@ function Services({lable,services}) {
   return (
     <div className='services container mt-5'>
       <div className='row'>
-        <h1 className='service-header fs-1'>{lable}</h1>
+        <h1 className='service-header text-center fs-1'>{lable}</h1>
       </div>
       <div className='row'>
         <div className='container d-flex justify-content-center align-items-center flex-wrap'>
