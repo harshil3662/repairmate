@@ -1,5 +1,7 @@
 const mongoose = require('mongoose')
-const mongoString = "mongodb+srv://repairmateadmin:3662@repairmate.dy9r1vc.mongodb.net/repairmates"
+require('dotenv').config({ path: "../.env" })
+console.log(process.env)
+const mongoString = process.env.MONGO_STRING
 
 mongoose.connect(mongoString)
 const db = mongoose.connection

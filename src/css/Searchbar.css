@@ -1,6 +1,6 @@
 .searchbar{
     width: 700px;
-    height: 70px;
+    height: 60px;
     border-radius: 2em;
     transition: 0.2s;
     box-shadow: 2px 2px 5px #D3D3D3;
@@ -45,8 +45,8 @@
     width: 100%;
     background-color: #f66b5b;
     font-weight: 400;
-    font-size: large;
     transition: 0.2s;
+    font-size: 1.2rem;
 }
 
 .search-btn:hover{
@@ -55,11 +55,10 @@
 }
 
 .find{
-    font-size: 1.25em;
     font-variation-settings:
     'FILL' 1,
-    'wght' 400,
+    'wght' 700,
     'GRAD' 0,
     'opsz' 24;
-    font-size: 1.2em;
+    font-size: 1.3rem;
 }

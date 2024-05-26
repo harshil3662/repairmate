@@ -6,18 +6,18 @@ function Searchbar() {
   return (
     <div className='container d-flex justify-content-center align-items-center mt-5'>
       <div className='searchbar d-flex justify-content-center align-items-center'>
-        <div className='inputbox-div col-10'>
+        <div className='inputbox-div col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-9'>
           <input
             name="search"
             type="text"
-            className="inputbox ps-4"
+            className="inputbox fs-5 ps-4"
             placeholder="Look up your favourite garage"
             autocomplete="off"/>
         </div>
-        <div className='search-btn-div col-2'>
-          <button className='search-btn' type='submit' onSubmit={()=>{}}>
-            <div className="d-flex fs-5 justify-content-center align-items-center">
-              <span class="material-symbols-outlined find">search</span> Search
+        <div className='search-btn-div col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-3 col-3'>
+          <button className='search-btn fw-bold' type='submit' onSubmit={()=>{}}>
+            <div className="d-flex justify-content-center align-items-center">
+              <span className="fw-bold material-symbols-outlined find">search</span> Search
             </div>
           </button>
         </div>

@@ -18,7 +18,6 @@ function Garage() {
       {day:'Thursday',timing:'6am - 10pm',id:4},
       {day:'Friday',timing:'6am - 10pm',id:5},
       {day:'Saturday',timing:'6am - 10pm',id:6}
-      
     ]
   )
 

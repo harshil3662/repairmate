@@ -1,6 +1,5 @@
 .footer{
     padding: 2em;
-    width: 100vw;
     display: grid;
     grid-template-columns: auto auto auto;
     place-items: center;

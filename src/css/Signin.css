@@ -1,4 +1,12 @@
-.tile{
+.signin{
+    height: 100vh;
+}
+
+.signin-box{
+    width: 40%;
+}
+
+/* .tile{
     position: relative;
     height: 100vh;
     background-color: #F5F5F5;
@@ -174,4 +182,4 @@
 .signin-footer{
     position: absolute;
     bottom: 0%;
-}
+} */
