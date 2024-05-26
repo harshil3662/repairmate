@@ -42,7 +42,7 @@ function Signin() {
   }
 
   return (
-    <div className='position-relative signin'>
+    <div className='signin'>
       <div className='row'>
         <div className='container d-flex justify-content-center align-items-center'>
           <div className='signin-box'>
@@ -80,7 +80,7 @@ function Signin() {
           </div>
         </div>
       </div>
-      <div className='position-absolute bottom-0'>
+      <div className=''>
         <Footer/>
       </div>
     </div>
