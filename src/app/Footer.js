@@ -4,17 +4,11 @@ import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
-    <div className='footer'>
-      <div className='tile1'>
-        <a href='/#'>Lorem ipsum</a><br/>
+    <footer className='footer'>
+      <div className="footer-content">
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
       </div>
-      <div className='tile2'>
-        <a href='/#'>Lorem ipsum</a><br/>
-      </div>
-      <div className='tile3'>
-        <a href='/#'>Lorem ipsum</a><br/>
-      </div>
-    </div>
+    </footer>
   )
 }
 

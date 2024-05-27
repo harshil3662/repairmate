@@ -101,7 +101,7 @@ function Garage() {
                 <textarea className="form-control" id="" placeholder='Define your Issue with the car'></textarea>
               </div>
               <div className='m-2'>
-                <button className='p-2 fs-5 schedule-btn rounded' type='submit'>Schedule</button>
+                <button className='p-2 fw-bold schedule-btn rounded' type='submit'>Schedule</button>
               </div>
             </form>
           </div>
