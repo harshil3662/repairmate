@@ -6,11 +6,11 @@ function Signup() {
 
   const [pointer,setPointer] = useState(0)
   const [state,setState] = useState([
-    { lable : 'Fullname',input:'text',value:'',button:'button',name:'uName'},
-    { lable : 'Your Email',input:'email',value:'',button:'button',name:'uEmail'},
-    { lable : 'Mobile No',input:'tel',value:'',button:'button',name:'uMobile'},
-    { lable : 'Password',input:'password',value:'',button:'button',name:'uPSW'},
-    { lable : 'Re-type the Password:',input:'password',value:'',button:'button',name:'uRPSW'}
+    { lable : 'Fullname',type:'text',value:'',button:'button',name:'uName'},
+    { lable : 'Your Email',type:'email',value:'',button:'button',name:'uEmail'},
+    { lable : 'Mobile No',type:'tel',value:'',button:'button',name:'uMobile'},
+    { lable : 'Password',type:'password',value:'',button:'button',name:'uPSW'},
+    { lable : 'Re-type the Password:',type:'password',value:'',button:'button',name:'uRPSW'}
   ])
 
   const clickHandler = ()=>{
@@ -57,23 +57,32 @@ function Signup() {
             <form>
               <div className="row form-floating mb-3">
                 <input 
-                  type={state[pointer].input}
+                  type={state[pointer].type}
                   name={state[pointer].name}
                   value={state[pointer].value}
-                  className="fs-5 form-control" 
+                  className="border border-secondary rounded-pill fs-5 form-control" 
                   id="floatingInput"
                   onChange={onChangeHandler}
                   placeholder=" "
-                  autocomplete="off"
                   />
                 <label for="floatingInput">{state[pointer].lable}</label>
               </div>
               <div className='row'>
                 <button
-                 className='p-2 signin-btn fw-bold rounded' 
+                 className='p-2 signin-btn fw-bold rounded-pill' 
                  type={state[pointer].button} 
                  onClick={(pointer === 4) ? submitHandler : clickHandler}>
-                  {(pointer === 4) ? 'Create account' : 'Next'}
+                  {(pointer === 4) ? 
+                    <div className='d-flex justify-content-center align-items-center'>
+                      <i className="bi bi-person-plus-fill fs-5 me-2"></i>
+                      <span>Create account</span>
+                    </div>
+                   : 
+                   <div className='d-flex justify-content-center align-items-center'>
+                    <i className="bi bi-fast-forward-btn-fill fs-5 me-2"></i>
+                    <span>Next</span>
+                  </div>
+                  }
                 </button>
               </div>
             </form>

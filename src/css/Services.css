@@ -8,20 +8,18 @@
 
 .service{
     width: 160px;
-    border-radius: 1.5em;
     background-color: white;
     transition: 0.3s;
     cursor: pointer;
+    border-radius: 2rem;
 }
 
 .service:hover{
-    transform: scale(1.1);
-    background-color: #FFF5EE;
+    background-color: #fdf0ef;
 }
 
 .svc-name{
     margin-top: 1.1em;
     text-align: center;
-    font-size: 1em;
     color: black;
 }

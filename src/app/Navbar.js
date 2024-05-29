@@ -25,21 +25,20 @@ function Navbar() {
                 <div className='container d-flex justify-content-end align-items-center'>
                   <div className='col-8 d-none d-sm-none d-md-none d-lg-none d-xl-flex d-xxl-flex 
                     justify-content-xl-end justify-content-xxl-end align-items-xl-end align-items-xxl-end m-1'>
-                    <span className='line p-1 pe-2'>Let's get your</span>
+                    <span className='line fw-bold p-1 pe-2'>Let's get your</span>
                     <span className="car material-symbols-outlined">toys</span> 
-                    <span className='line p-1 ps-2'>back on Track</span>
+                    <span className='line fw-bold p-1 ps-2'>back on Track</span>
                   </div>
-                  <div className='col-2 d-none d-sm-none d-md-none d-lg-none d-xl-block d-xxl-block'>
+                  <div className='col-2 d-xxl-flex d-xl-flex justify-content-center align-items-center d-none d-sm-none d-md-none d-lg-none'>
                     <Link 
-                      className='nav-btn d-flex justify-content-center align-items-center text-xl m-1' 
+                      className='nav-btn rounded-pill fw-bold d-flex justify-content-center align-items-center' 
                       to='/signin'>
-                        Sign In
+                        <i className="bi bi-box-arrow-in-right fs-5 me-2"></i>
+                        <span>Sign In</span>
                     </Link>
                   </div>
                   <div className='col-1 d-flex justify-content-center align-items-center m-1'>
-                    <span className="fs-2 setting material-symbols-outlined">
-                      menu
-                    </span>
+                    <i className="icons bi bi-sliders fs-3"></i>
                   </div>
                 </div>
               </div>
