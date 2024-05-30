@@ -1,0 +1,33 @@
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    transition: transform ease-in-out;
+    background-color: white;
+  }
+
+  .sidebar-closed {
+    transform: translateX(100%);
+  }
+  
+  .sidebar-open {
+    transform: translateX(0);
+  }
+  
+  .nav-link.active {
+    background-color: #0d6efd;
+    color: white;
+  }
+  
+  .nav-link {
+    color: #333;
+  }
+  
+  .nav-link:hover {
+    background-color: #e9ecef;
+    color: #000;
+  }
+  

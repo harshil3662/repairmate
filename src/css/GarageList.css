@@ -1,6 +1,6 @@
 .list-headline{
     font-family: 'Kalnia';
-    background: linear-gradient(to right,#e38e05, #d01e0a);
+    background: linear-gradient(to right,#808080, black);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -22,7 +22,7 @@
 }
 
 .card-name{
-    color: #F16051;
+    color: #696969;
 }
 
 .top-services-heading{

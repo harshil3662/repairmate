@@ -31,7 +31,7 @@ function GarageList({headline}) {
             return(
               <Link to={`/garage/${garage._id}`} state={{garage}} className='col link m-1'>
                 <div className="card border-secondary">
-                  <div className="card-header d-flex justify-content-between align-items-center garage-name pt-2 ps-3 fw-bold">
+                  <div className="card-header d-flex justify-content-between align-items-center garage-name pt-2 ps-3">
                     <div className='card-name fs-5'>{garage.name}</div>
                     <div className='d-flex justify-content-center align-items-center'>
                       <span className='me-1'>4.9</span>
@@ -49,14 +49,10 @@ function GarageList({headline}) {
                   </div>
                   <div className="card-footer bg-transparent border-secondary">
                     <div className='float-start d-flex justify-content-center align-items-center'>
-                      <div className='location-icon d-flex justify-content-center align-items-center'>
                         <i className="bi bi-geo-alt-fill text-dark me-1"></i>
-                      </div>
-                      <div className='location d-flex justify-content-center align-items-center fs-6'>
                         <span>{garage.location}</span>
-                      </div>
                     </div>
-                    <div className='float-end d-flex justify-content-center align-items-center mail'>
+                    <div className='float-end d-flex justify-content-center align-items-center'>
                       <i className="bi bi-envelope-fill text-dark"></i>
                     </div>
                   </div>

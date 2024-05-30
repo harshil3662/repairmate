@@ -17,7 +17,7 @@
 }
 
 .social_media{
-    background-color: #F5F5F5;
+    background-color: #DCDCDC;
 }
 
 .media{
@@ -25,7 +25,7 @@
 }
 
 .media:hover{
-    background-color: #D3D3D3;
+    background-color: #C0C0C0;
 }
 
 .detail{
@@ -37,6 +37,7 @@
     border-radius: 2.5rem;
     border: 1px solid #DCDCDC;
     box-shadow: 1px 3px 10px 4px #e9e9e9;
+    background-color: white;
     z-index: 0;
 }
 
@@ -46,25 +47,17 @@ input::placeholder{
 
 .schedule-btn{
     width: 100%;
-    background-color: #ffae4c;
+    background-color: #C0C0C0;
     border: none;
     transition: 0.2s;
 }
 
-.deliverables{
-    background-color: #fff6f5;
-    border-radius: 2rem;
-}
-
 .schedule-btn:hover{
-    box-shadow: 3px 3px 10px #808080;
+    transform: scale(1.05);
+    background-color: #A9A9A9;
 }
 
-.tick{
-    font-variation-settings:
-    'FILL' 1,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24;
-    color: #228B22;
+.deliverables{
+    background-color: white;
+    border-radius: 2rem;
 }

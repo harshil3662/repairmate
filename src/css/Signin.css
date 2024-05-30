@@ -4,7 +4,6 @@
 }
 
 .prev{
-    color: #f44f3d;
     cursor: pointer;
 }
 
@@ -12,30 +11,32 @@
     height: fit-content;
     border-radius: 2.5rem;
     border: none;
+    background-color: white;
     box-shadow: 1px 5px 20px 8px #D3D3D3;
 }
 
 .signin-btn{
     width: 100%;
-    background-color: #ffae4c;
+    background-color: #C0C0C0;
     border: none;
     transition: 0.2s;
 }
 
 .signin-btn:hover{
-    box-shadow: 3px 3px 10px #696969;
+    transform: scale(1.05);
+    background-color: #A9A9A9;
 }
 
 .signup-btn{
     width: 100%;
-    background-color: #ffae4c;
+    background-color: #C0C0C0;
     border: none;
     transition: 0.2s;
 }
 
 .signup-btn:hover{
     transform: scale(1.05);
-    box-shadow: 3px 3px 10px #696969;
+    background-color: #A9A9A9;
 }
 
 .frgt{
@@ -44,6 +45,6 @@
 }
 
 .frgt:hover{
-    color: #4169E1;
+    color: #696969;
     text-decoration: underline;
 }

@@ -5,7 +5,7 @@ function Searchbar() {
 
   return (
     <div className='container d-flex justify-content-center align-items-center mt-5'>
-      <div className='p-1 searchbar border rounded-pill d-flex justify-content-center align-items-center'>
+      <div className='p-2 searchbar border rounded-pill d-flex justify-content-center align-items-center'>
         <div className='inputbox-div col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-9 form-floating'>
           <input
             id='search'

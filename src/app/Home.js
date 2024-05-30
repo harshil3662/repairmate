@@ -7,7 +7,7 @@ import Services from './Services'
 function Home() {
 
   const services = [
-    {src:'/car.png',serviceName:'Car Inspection'},
+    {src:'/car-inspection.png',serviceName:'Car Inspection'},
     {src:'/schedule.png',serviceName:'Periodic Service'},
     {src:'/tire.png',serviceName:'Tyre & Wheel'},
     {src:'/spray-gun.png',serviceName:'Car Painting'},
@@ -22,7 +22,9 @@ function Home() {
       <Searchbar/>
       <Services lable={"Popular Car Services"} services={services}/>
       <GarageList headline={"Top Rated Auto Centers"}/>
+      <Services lable={"Best from Repairmet experts"} services={services.slice(0,6)}/>
       <GarageList headline={"Best centers of the week"}/>
+      <Services lable={"Seasional Services"} services={services.slice(0,5)}/>
       <GarageList headline={"Top of the season"}/>
     </div>
   )

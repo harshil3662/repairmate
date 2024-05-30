@@ -9,7 +9,8 @@ function Services({lable,services}) {
         <h1 className='service-header text-center fs-1'>{lable}</h1>
       </div>
       <div className='row'>
-        <div className='container d-flex justify-content-center align-items-center flex-wrap'>
+        <div className='container d-flex justify-content-xxl-center justify-content-xl-center justify-content-lg-center justify-content-md-center align-items-center flex-xxl-wrap flex-xl-wrap flex-lg-wrap flex-md-wrap flex-sm-nowrap flex-nowrap 
+        overflow-scroll'>
           {
             services.map((service)=>{
               return (
@@ -28,23 +29,6 @@ function Services({lable,services}) {
           }
         </div>
       </div>
-
-      
-
-      {/* <div className='service-list'>
-        {
-          services.map((service)=>{
-            return (
-              <Link to={`/services/${service.serviceName}`} className='link'>
-                <div className='service'>
-                  <img src={service.src} alt="" />
-                  <div className='service-name'>{service.serviceName}</div>
-                </div>
-              </Link>
-            )
-          })
-        }
-      </div> */}
     </div>
   )
 }

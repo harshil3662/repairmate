@@ -39,7 +39,7 @@ function Signin() {
               <label className='lable-2 fw-bold fs-1'>mate</label>
             </div>
             <div className='logo m-1'>
-              <img className='img-fluid' src='/settings.png'/>
+              <img className='img-fluid' src='/repair.png'/>
             </div>
           </div>
         </div>

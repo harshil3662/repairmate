@@ -2,27 +2,27 @@
     font-family: "Lato", sans-serif;
 }
 
-.icons{
-    color: #f44f3d;
-}
-
 body {
     font-size: 16px;
 }
 
-.navbar{
+#root{
     background-color: #F5F5F5;
+}
+
+.navbar{
+    background-color: white;
     box-shadow: 0px 1px 10px 2px #d2d2d2;
 }
 
 .lable-1{
     font-family: 'Amarante';
-    color: #FF8C00;
+    color: #808080;
 }
 
 .lable-2{
     font-family: 'Amarante';
-    color: #f44f3d;
+    color: #000000;
 }
 
 .logo{
@@ -35,6 +35,11 @@ body {
     height: 100%;
 }
 
+.car img{
+    width: 60px;
+    height: 60px;
+}
+
 .line{
     font-size: 1.1rem;
     font-weight: 400;
@@ -42,16 +47,15 @@ body {
 
 .car{
     font-size: 2.5rem;
-    color: #F16051;
+    color: #696969;
 }
 
 .nav-btn{
     width: 100%;
-    background-color: #ffae4c;
+    background-color: #C0C0C0;
     color: #000000;
     padding: 0.5em;
-    border: 1px solid #ffae4c;
-    border-radius: 1em;
+    border: none;
     cursor: pointer;
     text-decoration: none;
     transition: 0.2s;
@@ -59,5 +63,17 @@ body {
 
 .nav-btn:hover{
     transform: scale(1.05);
-    box-shadow: 3px 3px 10px #808080;
+    background-color: #A9A9A9;
+}
+
+.menu{
+    cursor: pointer;
+}
+
+.blur{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255,0.9);
+    z-index: 1;
 }

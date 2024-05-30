@@ -22,7 +22,7 @@ function Garage() {
   )
 
   const services = [
-    {src:'/car.png',serviceName:'Car Inspection'},
+    {src:'/car-inspection.png',serviceName:'Car Inspection'},
     {src:'/schedule.png',serviceName:'Periodic Service'},
     {src:'/tire.png',serviceName:'Tyre & Wheel'},
     {src:'/spray-gun.png',serviceName:'Car Painting'},
@@ -54,7 +54,7 @@ function Garage() {
               </div>
           </div>
         </div>
-        <div className='row m-4'>
+        <div className='row p-4'>
           <div className='col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 d-flex justify-content-center align-items-center'>
             <div className='detail'>
               <div className='m-2 d-flex justify-content-center align-items-center'>

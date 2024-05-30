@@ -3,11 +3,9 @@
     height: 70px;
     border-radius: 1.5rem;
     transition: 0.2s;
+    background-color: white;
     box-shadow: 2px 2px 5px #D3D3D3;
-}
-
-.searchbar:hover{
-    box-shadow: 4px 4px 10px #D3D3D3;
+    z-index: 0;
 }
 
 .inputbox-div{
@@ -36,22 +34,15 @@
 }
 
 .search-btn{
-    border: 1px solid #ffae4c;
     height: 100%;
     width: 100%;
-    background-color: #ffae4c;
+    border: none;
     font-weight: 400;
     transition: 0.2s;
+    background-color: #C0C0C0;
 }
 
 .search-btn:hover{
-    transform: scale(1.15);
-}
-
-.find{
-    font-variation-settings:
-    'FILL' 1,
-    'wght' 700,
-    'GRAD' 0,
-    'opsz' 24;
+    transform: scale(1.05);
+    background-color: #A9A9A9;
 }
