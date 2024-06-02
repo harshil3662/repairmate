@@ -39,10 +39,11 @@
     border: none;
     font-weight: 400;
     transition: 0.2s;
-    background-color: #C0C0C0;
+    background-color: #FF6347;
+    color: white;
 }
 
 .search-btn:hover{
     transform: scale(1.05);
-    background-color: #A9A9A9;
+    background-color: #FF4500;
 }

@@ -17,26 +17,28 @@
 
 .signin-btn{
     width: 100%;
-    background-color: #C0C0C0;
+    background-color: #FF6347;
     border: none;
     transition: 0.2s;
+    color: white;
 }
 
 .signin-btn:hover{
     transform: scale(1.05);
-    background-color: #A9A9A9;
+    background-color: #FF4500;
 }
 
 .signup-btn{
     width: 100%;
-    background-color: #C0C0C0;
+    background-color: #FF6347;
     border: none;
     transition: 0.2s;
+    color: white;
 }
 
 .signup-btn:hover{
     transform: scale(1.05);
-    background-color: #A9A9A9;
+    background-color: #FF4500;
 }
 
 .frgt{

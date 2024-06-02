@@ -79,7 +79,7 @@ function Signup() {
                     </div>
                    : 
                    <div className='d-flex justify-content-center align-items-center'>
-                    <i className="bi bi-fast-forward-btn-fill fs-5 me-2"></i>
+                    <i className="btn-icons bi bi-fast-forward-btn-fill fs-5 me-2"></i>
                     <span>Next</span>
                   </div>
                   }

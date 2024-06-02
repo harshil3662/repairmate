@@ -1,58 +1,53 @@
 import React from 'react';
 import '../css/Sidebar.css';
+import { Link } from 'react-router-dom'
 
 const Sidebar = ({isClosed,isOpen}) => {
   return (
-    <div className={`border-start d-flex flex-column flex-shrink-0 p-3 sidebar ${isOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
+    <div className='d-flex flex-column flex-shrink-0 p-3 sidebar'>
         <div className='d-flex justify-content-between align-items-center'>
-            <i class="bi bi-arrow-right fs-5 text-dark" onClick={isClosed}></i>
-            <span className='text-end'>Welcome, Harshil</span>
+            <span className='close p-1'><i className="bi bi-x-circle p-2 fs-3 text-light" onClick={isClosed}></i></span>
+            <span className='text-end fs-4 text-light'>Welcome, Harshil</span>
         </div>
-        <hr />
+        <hr className='text-light'/>
         <ul className="nav nav-pills flex-column mb-auto">
             <li className="nav-item">
-                <a href="#" className="nav-link link-dark" aria-current="page">
-                    <i className="bi bi-house-door-fill me-2"></i>
-                    Home
-                </a>
+                <Link to='/' className="d-flex justify-content-start align-items-center nav-link" aria-current="page">
+                    <i className="icons bi bi-house-door-fill fs-4 me-3"></i>
+                    <span className='text-light'>Home</span>
+                </Link>
             </li>
             <li>
-                <a href="#" className="nav-link link-dark">
-                    <i className="bi bi-speedometer2 me-2"></i>
-                    Dashboard
-                </a>
+                <Link to="#" className="d-flex justify-content-start align-items-center nav-link">
+                    <i className="icons bi bi-speedometer2 fs-4 me-3"></i>
+                    <span className='text-light'>Dashboard</span>
+                </Link>
             </li>
             <li>
-                <a href="#" className="nav-link link-dark">
-                    <i className="bi bi-table me-2"></i>
-                    Orders
-                </a>
+                <Link to="/orders" className="d-flex justify-content-start align-items-center nav-link">
+                    <i className="icons bi bi-table fs-4 me-3"></i>
+                    <span className='text-light'>Orders</span>
+                </Link>
             </li>
             <li>
-                <a href="#" className="nav-link link-dark">
-                    <i className="bi bi-grid me-2"></i>
-                    Products
-                </a>
+                <Link to="/favourite" className="d-flex justify-content-start align-items-center nav-link">
+                    <i className="icons bi bi-heart fs-4 me-3"></i>
+                    <span className='text-light'>Favourite</span>
+                </Link>
             </li>
             <li>
-                <a href="#" className="nav-link link-dark">
-                    <i className="bi bi-people me-2"></i>
-                    Customers
-                </a>
+                <Link to="/profile" className="d-flex justify-content-start align-items-center nav-link">
+                    <i className="icons bi bi-people-fill fs-4 me-3"></i>
+                    <span className='text-light'>Profile</span>
+                </Link>
+            </li>
+            <li>
+                <Link to="/signin" className="d-flex justify-content-start align-items-center nav-link">
+                    <i className="icons bi bi-person-circle fs-4 me-3"></i>
+                    <span className='text-light'>Sign In</span>
+                </Link>
             </li>
         </ul>
-        <hr />
-        <div className="dropdown">
-            <a href="#" className="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="https://via.placeholder.com/40" alt="" width="32" height="32" className="rounded-circle me-2" />
-            <strong>User</strong>
-            </a>
-            <ul className="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-            <li><a className="dropdown-item" href="#">Profile</a></li>
-            <li><a className="dropdown-item" href="#">Settings</a></li>
-            <li><a className="dropdown-item" href="#">Sign out</a></li>
-            </ul>
-        </div>
     </div>
   );
 };

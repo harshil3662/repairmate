@@ -72,12 +72,12 @@ function Signin() {
                  onClick={(pointer === 1) ? submitHandler : clickHandler}>
                   { pointer === 1 ? 
                     <div className='d-flex justify-content-center align-items-center'>
-                      <i className="bi bi-box-arrow-in-right fs-5 me-2"></i>
+                      <i className="btn-icons bi bi-box-arrow-in-right fs-5 me-2"></i>
                       <span>Sign In</span>
                     </div>
                      : 
                     <div className='d-flex justify-content-center align-items-center'>
-                      <i className="bi bi-fast-forward-btn-fill fs-5 me-2"></i>
+                      <i className="btn-icons bi bi-fast-forward-btn-fill fs-5 me-2"></i>
                       <span>Next</span>
                     </div>
                   }
@@ -89,7 +89,7 @@ function Signin() {
         <div className='row'>
           <Link to='/signup'>
             <button className='signup-btn fw-bold rounded-pill p-2'>
-              <i className="bi bi-person-plus-fill fs-5 me-2"></i>
+              <i className="btn-icons bi bi-person-plus-fill fs-5 me-2"></i>
               <span>Create a Repairmate Account</span>
             </button>
           </Link>
