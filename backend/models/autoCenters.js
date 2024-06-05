@@ -24,18 +24,18 @@ const autoCenterSchema = new mongoose.Schema({
         default: new Date().now()
     },
     services: {
-        type: [String],
+        type: [Number],
         required: true
     },
     experties: {
-        type: [String],
+        type: [Number],
         required: true
     },
     rating : {
         type: Number,
         default: 0
     },
-    date: {
+    dateOfRegistration: {
       type: Number,
       default: new Date().now()
     }
