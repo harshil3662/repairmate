@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+        app: repairmate
+        tier: frontend
+  template:
+    metadata:
+      labels:
+        app: repairmate
+        tier: frontend
+    spec:
+      containers:
+      - name: front
+        image: harshil3662/repairmate-frontend:v1
+        ports:
+        - containerPort: 3000
