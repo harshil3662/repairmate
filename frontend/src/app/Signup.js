@@ -10,7 +10,7 @@ function Signup() {
     { lable : 'Your Email',type:'email',value:'',button:'button',name:'uEmail'},
     { lable : 'Mobile No',type:'tel',value:'',button:'button',name:'uMobile'},
     { lable : 'Password',type:'password',value:'',button:'button',name:'uPSW'},
-    { lable : 'Re-type the Password:',type:'password',value:'',button:'button',name:'uRPSW'}
+    { lable : 'Re-type the Password',type:'password',value:'',button:'button',name:'uRPSW'}
   ])
 
   const clickHandler = ()=>{

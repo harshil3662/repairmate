@@ -4,23 +4,17 @@ import { Link } from 'react-router-dom'
 import '../css/GarageList.css'
 
 function GarageList({headline}) {
-  const [data,setData] = useState([])
-
-  useEffect(()=>{
-    fetch('http://localhost:8080/garages')
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok')
-          }
-          return response.json()
-        })
-        .then((responseData) => {
-          setData(responseData.list)
-        })
-        .catch((err) => {
-          console.log(err)
-        })
-  },[data])
+  const data = [
+    {_id:1, name:'ABC Automotives and Repair', location:'160, Canon Jackson Dr', phone_no: '9624483190'},
+    {_id:2, name:'ABC Automotives and Repair', location:'160, Canon Jackson Dr', phone_no: '9624483190'},
+    {_id:3, name:'ABC Automotives and Repair', location:'160, Canon Jackson Dr', phone_no: '9624483190'},
+    {_id:4, name:'ABC Automotives and Repair', location:'160, Canon Jackson Dr', phone_no: '9624483190'},
+    {_id:5, name:'ABC Automotives and Repair', location:'160, Canon Jackson Dr', phone_no: '9624483190'},
+    {_id:6, name:'ABC Automotives and Repair', location:'160, Canon Jackson Dr', phone_no: '9624483190'},
+    {_id:7, name:'ABC Automotives and Repair', location:'160, Canon Jackson Dr', phone_no: '9624483190'},
+    {_id:8, name:'ABC Automotives and Repair', location:'160, Canon Jackson Dr', phone_no: '9624483190'},
+    {_id:9, name:'ABC Automotives and Repair', location:'160, Canon Jackson Dr', phone_no: '9624483190'}
+  ]
 
   return (
     <div className='container-fluid m-2'>
