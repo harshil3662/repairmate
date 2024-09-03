@@ -18,12 +18,6 @@ const Sidebar = ({isClosed,isOpen}) => {
                 </Link>
             </li>
             <li>
-                <Link to="#" className="d-flex justify-content-start align-items-center nav-link">
-                    <i className="icons bi bi-speedometer2 fs-4 me-3"></i>
-                    <span className='text-light'>Dashboard</span>
-                </Link>
-            </li>
-            <li>
                 <Link to="/orders" className="d-flex justify-content-start align-items-center nav-link">
                     <i className="icons bi bi-table fs-4 me-3"></i>
                     <span className='text-light'>Orders</span>

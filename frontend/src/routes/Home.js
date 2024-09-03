@@ -1,8 +1,8 @@
-import GarageList from './GarageList'
+import GarageList from '../features/GarageList'
 import 'leaflet/dist/leaflet.css'
 import '../css/Home.css'
-import Searchbar from './Searchbar'
-import Services from './Services'
+import Searchbar from '../features/Searchbar'
+import Services from '../features/Services'
 
 function Home() {
 

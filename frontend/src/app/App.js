@@ -1,13 +1,13 @@
-import Garage from "./app/Garage"
-import Home from "./app/Home"
-import Layout from "./app/Layout"
+import Garage from "../routes/Garage"
+import Home from "../routes/Home"
+import Layout from "./Layout"
 import { BrowserRouter as Router,Routes,Route } from "react-router-dom"
-import Signin from "./app/Signin"
-import Signup from "./app/Signup"
-import Listing from "./app/Listing"
-import Order from "./app/Order"
-import Profile from "./app/Profile"
-import Favourite from "./app/Favourite"
+import Signin from "../routes/Signin"
+import Signup from "../routes/Signup"
+import Listing from "../features/Listing"
+import Order from "../routes/Order"
+import Profile from "../routes/Profile"
+import Favourite from "../routes/Favourite"
 
 function App() {
     return (

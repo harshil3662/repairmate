@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react'
-import Searchbar from './Searchbar'
-import Services from './Services'
+import Searchbar from '../features/Searchbar'
+import Services from '../features/Services'
 import { useLocation} from "react-router-dom"
 import '../css/Garage.css'
 
@@ -77,7 +77,7 @@ function Garage() {
                 })}
               </div>
               <div className='mt-3 d-flex justify-content-center align-items-center'>
-                <div className='social_media rounded-pill d-flex justify-content-center align-items-center p-2'>
+                <div className='rounded-pill d-flex justify-content-center align-items-center p-2'>
                   <a href='' className='media p-1'>
                     <i className="icons bi bi-instagram p-2 fs-3"></i>
                   </a>

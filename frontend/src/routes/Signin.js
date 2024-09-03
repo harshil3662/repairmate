@@ -1,6 +1,6 @@
 import { useState,useEffect,useRef } from 'react'
 import '../css/Signin.css'
-import Footer from './Footer'
+import Footer from '../app/Footer'
 import { Link } from 'react-router-dom'
 
 function Signin() {

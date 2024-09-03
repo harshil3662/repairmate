@@ -10,7 +10,7 @@
 .garage-header{
     background-color: rgba(255, 255, 255, 0.75);
     z-index: 1;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(10px);
 }
 
 .garage-name{
@@ -19,7 +19,7 @@
 }
 
 .experty{
-    background-color: #F5F5F5;
+    background-color: #e2e8d6;
 }
 
 .media{
@@ -27,7 +27,7 @@
 }
 
 .media:hover{
-    background-color: #FFDAB9;
+    background-color: #e2e8d6;
 }
 
 .detail{
@@ -64,3 +64,4 @@ input::placeholder{
     background-color: white;
     border-radius: 2rem;
 }
+  

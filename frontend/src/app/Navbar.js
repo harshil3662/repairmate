@@ -34,9 +34,9 @@ function Navbar() {
                       justify-content-xl-end justify-content-xxl-end align-items-xl-baseline align-items-xxl-baseline'>
                       <span className='line fw-bold p-1 pe-2'>Let's get your</span>
                       <div className='car p-1'>
-                        <img className='img-fluid' src='/car-icon.png'/>
+                        <img className='img-fluid' src='/transport.png'/>
                       </div>
-                      <span className='line fw-bold p-1 ps-2'>back on Track!!!</span>
+                      <span className='line fw-bold p-1 ps-2'>back on Track !</span>
                     </div>
                     <div className='d-xxl-flex d-xl-flex justify-content-center align-items-center d-none d-sm-none d-md-none d-lg-none m-2'>
                       <Link 
@@ -47,7 +47,7 @@ function Navbar() {
                       </Link>
                     </div>
                     <div className='d-flex justify-content-center align-items-center m-2'>
-                      <i className="menu bi bi-sliders fs-3" onClick={()=>{setOpen(!isOpen)}}></i>
+                      <i className="menu bi bi-sliders fs-3" onClick={isClosed}></i>
                     </div>
                   </div>
                 </div>

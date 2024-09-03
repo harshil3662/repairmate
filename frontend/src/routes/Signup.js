@@ -1,6 +1,6 @@
 import { useState,useEffect } from 'react'
 import '../css/Signup.css'
-import Footer from './Footer'
+import Footer from '../app/Footer'
 
 function Signup() {
 
