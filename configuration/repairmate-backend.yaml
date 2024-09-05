@@ -16,9 +16,32 @@ spec:
     spec:
       containers:
       - name: back
-        image: harshil3662/repairmate-backend:v1
+        image: harshil3662/repairmate-backend:latest
         ports:
         - containerPort: 8000
-        envFrom:
-        - configMapRef:
-            name: my-backend-config
+        env: 
+        - name: MONGO_URI
+          valueFrom:
+            secretKeyRef:
+              name: my-secret
+              key: mongo-uri
+        - name: ACCESS_TOKEN_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: my-secret
+              key: access-token-secret
+        - name: ACCESS_TOKEN_EXPIRY
+          valueFrom:
+            secretKeyRef:
+              name: my-secret
+              key: access-token-expiry
+        - name: REFRESH_TOKEN_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: my-secret
+              key: refresh-token-secret
+        - name: REFRESH_TOKEN_EXPIRY
+          valueFrom:
+            secretKeyRef:
+              name: my-secret
+              key: refresh-token-expiry

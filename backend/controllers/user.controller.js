@@ -1,7 +1,7 @@
 import asyncHandler from '../utils/asyncHandler.js'
 import APIError from '../utils/APIError.js'
 import { User } from '../models/users.model.js'
-import uploadToCloudinary from '../utils/clodinary.js'
+// import uploadToCloudinary from '../utils/clodinary.js'
 import APIResponse from '../utils/APIResponse.js'
 
 const generateAccessAndRefreshTokens = async(userId) => {
@@ -24,7 +24,7 @@ const registerUser = asyncHandler( async (req, res) => {
     // validation -not empty
     // check if user already exist: email
     // check for file or images
-    // upload to cloudinary
+    // upload to cloudinary(optional to my project)
     // cretate user object for mongodb entry
     // remove password and refresh token field
     // check user creation
@@ -47,16 +47,18 @@ const registerUser = asyncHandler( async (req, res) => {
 
     if(existedUser) throw new APIError(409, "User already exist.")
 
-    const avatarLocalPath = req.files?.avatar[0]?.path
-    const coverLocalPath = req.files?.cover[0]?.path
+    // ----------- this is for uploading files to Cloudinary(optional) -----------------
 
-    if(!avatarLocalPath) throw new APIError(400, "Avatar Image is required.")
+    // const avatarLocalPath = req.files?.avatar[0]?.path
+    // const coverLocalPath = req.files?.cover[0]?.path
 
-    const avatar = await uploadToCloudinary(avatarLocalPath)
-    const cover = await uploadToCloudinary(coverLocalPath)
+    // if(!avatarLocalPath) throw new APIError(400, "Avatar Image is required.")
 
-    if(!avatar) throw new APIError(500, "Avatar file not uploaded successfully.")
-    console.log("Avatar Url: ",avatar.url);
+    // const avatar = await uploadToCloudinary(avatarLocalPath)
+    // const cover = await uploadToCloudinary(coverLocalPath)
+
+    // if(!avatar) throw new APIError(500, "Avatar file not uploaded successfully.")
+    // console.log("Avatar Url: ",avatar.url);
 
     const user = await User.create({
         name,
