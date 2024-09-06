@@ -10,7 +10,6 @@ spec:
   ports:
   - port: 8000
     targetPort: 8000
-    nodePort: 30002
   selector:
     app: repairmate
     tier: backend
