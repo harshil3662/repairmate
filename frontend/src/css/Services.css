@@ -1,6 +1,6 @@
 .service-header{
     font-family: 'Kalnia';
-    background: linear-gradient(to right,#6B8E23, #3a5601);
+    background: linear-gradient(to right,#a4ce4f, #3a5601);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -18,7 +18,7 @@
 }
 
 .service:hover{
-    background-color: #e2e8d6;
+    background-image: radial-gradient(circle, white 30%, #e2e8d6 90%);
 }
 
 .svc-name{

@@ -61,7 +61,6 @@ function Signup() {
                   name={state[pointer].name}
                   value={state[pointer].value}
                   className="border border-secondary rounded-pill fs-5 form-control" 
-                  id="floatingInput"
                   onChange={onChangeHandler}
                   placeholder=" "
                   />

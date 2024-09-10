@@ -4,13 +4,16 @@ import Layout from "./Layout"
 import { BrowserRouter as Router,Routes,Route } from "react-router-dom"
 import Signin from "../routes/Signin"
 import Signup from "../routes/Signup"
-import Listing from "../features/Listing"
+import Listing from "../components/Listing"
 import Order from "../routes/Order"
 import Profile from "../routes/Profile"
 import Favourite from "../routes/Favourite"
+import UserProvider from "../APIs/userContext"
 
 function App() {
-    return (
+
+  return (
+    <UserProvider>
       <Router>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -25,7 +28,8 @@ function App() {
           <Route path="signup" element={<Signup />} />
         </Routes>
       </Router>
-    )
+    </UserProvider>
+  )
 }
 
 export default App

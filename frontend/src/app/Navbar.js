@@ -56,7 +56,7 @@ function Navbar() {
           </div>
         </nav>
         <div className={isOpen ? 'active' : ''}></div>
-        {isOpen ? <Sidebar isOpen={isOpen} isClosed={isClosed}/> : <></>}
+        {isOpen ? <Sidebar isClosed={isClosed}/> : <></>}
       </>
     )
 }

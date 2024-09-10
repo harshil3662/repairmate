@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react'
-import Searchbar from '../features/Searchbar'
-import Services from '../features/Services'
+import Searchbar from '../components/Searchbar'
+import Services from '../components/Services'
 import { useLocation} from "react-router-dom"
 import '../css/Garage.css'
 
@@ -93,10 +93,6 @@ function Garage() {
           </div>
           <div className='col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mt-md-5 mt-sm-5 mt-5 d-flex justify-content-center align-items-center'>
             <form className='form p-4'>
-              <div className="form-floating m-2">
-                <input id='name' name='name' type="text" className="border border-secondary rounded-pill form-control" placeholder='Enter your name' autocomplete="off" />
-                <label for="name">Enter your name</label>
-              </div>
               <div className="form-floating m-2">
                 <input id='car' name='car' type="text" className="border border-secondary rounded-pill form-control" placeholder='Enter car name & model' autocomplete="off"/>
                 <label for="car">Enter car name & model</label>

@@ -5,8 +5,7 @@
     top: 0;
     right: 0;
     z-index: 3;
-    transition: 1s ease-in-out;
-    background-color: #373737;
+    background-color: white;
   }
 
   .close{
@@ -15,21 +14,13 @@
     transition: 0.3s;
   }
 
-  .icons{
-    color: #FF6347;
-  }
-
   .close:hover{
-    background-color: #696969;
-  }
-  
-  .nav-link {
-    color: white;
-    transition: 0.5s;
+    background-color: #DCDCDC;
   }
   
   .nav-link:hover {
     transform: scale(1.05);
-    background-color: #696969	;
+    background-color: #DCDCDC	;
+    transition: 0.2s;
   }
   

@@ -2,6 +2,8 @@ import { useState,useEffect,useRef } from 'react'
 import '../css/Signin.css'
 import Footer from '../app/Footer'
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { UserContext } from '../APIs/userContext'
 
 function Signin() {
   const [pointer,setPointer] = useState(0)
@@ -59,7 +61,6 @@ function Signin() {
                   name={state[pointer].name}
                   value={state[pointer].value}
                   className="border border-secondary rounded-pill fs-5 form-control" 
-                  id="floatingInput"
                   onChange={onChangeHandler}
                   placeholder=" "
                   />

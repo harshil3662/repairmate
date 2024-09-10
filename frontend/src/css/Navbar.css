@@ -89,7 +89,6 @@ body {
     width: 100vw;
     height: 100vh;
     z-index: 2;
-    background-color: #fbf3ea;
-    opacity: 0.9;
-    transition: 0.3s;
+    opacity: 0.6;
+    background-color: white;
 }
