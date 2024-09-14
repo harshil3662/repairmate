@@ -4,7 +4,7 @@
 
 It is a platfform to book an appointment with your chosen auto experts if you are suffering any minor or major vehicle problems like engine inspection, tire changing, car paint and wash etc.
 
-All you need to do is book an appointment with your chosen auto center in your preffered time. The auto center will see and accept the order. While, if you want to toe your vehicle, you can also choose a date and a location for the suitability of yours.
+All you need to do is book an appointment with your chosen auto center in your preffered time. The auto center will see and accept the order. While doing this, if you want to toe your vehicle, you can also choose a date and a location for the suitability of yours.
 
 On the other hand, you can also host a garage on Repairmate to listing out your auto services, so others can have privilege to experience your auto service. Though, your auto center must be
 registered officially and adhere the government protocol.
