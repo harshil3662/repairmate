@@ -34,8 +34,5 @@ registered officially and adhere the government protocol.</p>
   <ol>Clone this project in your suitable directory by following command.</ol>
   ```bash
   git clone https://github.com/harshil3662/repairmate.git
-  ```bash
-  cd frontend
-  ```bash
-  npm install
+  ```
 </ul>
