@@ -18,6 +18,7 @@ registered officially and adhere the government protocol.
 ## Installtion
 
 - Clone this project in your suitable project directory by following command.
+  
   ```bash
   git clone https://github.com/harshil3662/repairmate.git
   ```
@@ -28,6 +29,7 @@ registered officially and adhere the government protocol.
   npm install
   ```
 - After NodeJs installation, got to the backend directory as following.
+  
   ```bash
   cd backend
   ```
@@ -35,6 +37,7 @@ registered officially and adhere the government protocol.
   npm install
   ```
 - Start npm engine to launch the backend server as below,
+  
   ```bash
   cd backend
   ```
@@ -42,9 +45,101 @@ registered officially and adhere the government protocol.
   npm start
   ```
 - To run the frontend side, follow this command,
+  
   ```bash
   cd frontend
   ```
   ```bash
   npm start
+  ```
+
+## Deployment with kubernetes
+
+### Prerequisite
+
+- Minikube installation
+- Kubernetes installation
+- Docker Desktop
+- Docker Hub registry
+
+1. Create the frontend docker image:
+   
+  ```bash
+   cd frontend
+  ```
+  ```bash
+  docker build -t frontend-image-name .
+  ```
+  ```bash
+  docker login
+  ```
+  ```bash
+  docker tag frontend-image-name username/repository-name:tag
+  ```
+  ```bash
+  docker push username/repository-name:tag
+  ```
+
+2. Create the backend docker image:
+   
+  ```bash
+   cd frontend
+  ```
+  ```bash
+  docker build -t backend-image-name .
+  ```
+  ```bash
+  docker login
+  ```
+  ```bash
+  docker tag backend-image-name username/repository-name:tag
+  ```
+  ```bash
+  docker push username/repository-name:tag
+  ```
+
+3. start minikube cluster:
+   
+  ```bash
+  minikube start
+  ```
+
+4. Create frontend deployment:
+   
+  ```bash
+  cd configuration
+  ```
+  ```bash
+  kubectl apply -f repairmate-frontend.yaml
+  ```
+
+  - you can create and customize your service, config and secret yaml files, but for the frontend, I have created only deployment and service yaml files. There is no need for secret and   
+    config yaml files.
+    
+  ```bash
+  kubectl apply -f frontend-service.yaml
+  ```
+
+5. Create backend deployment:
+    
+  - For the backend side, there is a need for secret yaml file due to environment variables for Access and Refresh tokens, Mongodb URL and more. You can add and edit the variables 
+    according to your opaque value. You can also create cinfig.yaml file for more configuration but there is no need for this.
+    
+  ```bash
+  kubectl apply -f secret.yaml
+  ```
+  ```bash
+  kubectl apply -f repairmate-backend.yaml
+  ```
+  ```bash
+  kubectl apply -f backend-service.yaml
+  ```
+
+6. To access the application, you have to expose the frontend and backend applications using minikube service commands as below.
+
+  ```bash
+  minikube service frontend
+  ```
+  ```bash
+  minikube service backend
   ```
