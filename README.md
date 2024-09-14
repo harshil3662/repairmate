@@ -121,7 +121,7 @@ registered officially and adhere the government protocol.
   ```
 
 5. Create backend deployment:
-    
+    </br>
   - For the backend side, there is a need for secret yaml file due to environment variables for Access and Refresh tokens, Mongodb URL and more. You can add and edit the variables 
     according to your opaque value. You can also create cinfig.yaml file for more configuration but there is no need for this.
     
@@ -136,7 +136,7 @@ registered officially and adhere the government protocol.
   ```
 
 6. To access the application, you have to expose the frontend and backend applications using minikube service commands as below.
-
+   
   ```bash
   minikube service frontend
   ```
