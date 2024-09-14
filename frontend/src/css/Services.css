@@ -12,13 +12,16 @@
 .service{
     width: 160px;
     background-color: white;
-    transition: 0.3s;
+    transition: 0.5s;
     cursor: pointer;
     border-radius: 2rem;
+    border: 1px solid white;
 }
 
 .service:hover{
     background-image: radial-gradient(circle, white 30%, #e2e8d6 90%);
+    border: 1px solid #6B8E23;
+    box-shadow: 2px 2px 8px #e2e8d6;
 }
 
 .svc-name{
