@@ -15,7 +15,7 @@ registered officially and adhere the government protocol.
 - Backend: NodeJs, ExpressJs, MongoDb
 - Deployment: Docker, Docker Hub, Kubernetes
 
-## Installtion
+## Installation
 
 - Clone this project in your suitable project directory by following command.
   
