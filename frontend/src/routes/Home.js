@@ -25,7 +25,7 @@ function Home() {
       <Services lable={"Best from Repairmet experts"} services={services.slice(0,6)}/>
       <GarageList headline={"Best centers of the week"}/>
       <Services lable={"Seasional Services"} services={services.slice(0,5)}/>
-      <GarageList headline={"Top of the"}/>
+      <GarageList headline={"Top of the seasion"}/>
     </div>
   )
 }
