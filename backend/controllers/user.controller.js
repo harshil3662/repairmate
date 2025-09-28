@@ -159,7 +159,33 @@ const logoutUser = asyncHandler( async (req, res) => {
 })
 
 const refreshAccessToken = asyncHandler ( async (req, res) => {
-    
+    const token = req.cookies?.refreshToken || req.header("Authorization")?.replace("Bearer ", "")
+
+    if(!token) throw new APIError(401, "Unauthorized request.")
+    const decodedToken = jwt.verify(token, process.env.REFRESH_TOKEN_SECRET)
+
+    const user = await User.findById(decodedToken?._id).select("-password")
+
+    const accessToken = user.generateAccessToken()
+    const refreshToken = user.generateRefreshToken()
+
+    user.refreshToken = refreshToken
+    await user.save({ validateBeforeSave: false })
+
+    const cookieOption = {
+        httpOnly: true,
+        secure: true
+    }
+
+    return res.status(200)
+    .cookie("accessToken", accessToken, cookieOption)
+    .cookie("refreshToken", refreshToken, cookieOption)
+    .json(
+        new APIResponse(200, {
+            user: user.email
+        },
+        "User Access Token updated successfully.")
+    )
 })
 
-export { registerUser, loginUser, logoutUser }
+export { registerUser, loginUser, logoutUser, refreshAccessToken }
